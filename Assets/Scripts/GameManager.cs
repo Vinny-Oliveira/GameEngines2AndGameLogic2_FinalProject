@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour {
         // If there is a successful hit
         if (Physics.Raycast(ray, out hit, 100)) {
             // If you hit a destructable object, decrease its health
-            if (hit.collider.gameObject.TryGetComponent(out Destructable destructable)) {
+            if (hit.collider.gameObject.TryGetComponent(out Destructable destructable) && destructable.GetCanDestroy()) {
                 destructable.DecreaseHealth();
             }
         }
     }
+
 }

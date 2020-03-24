@@ -12,6 +12,11 @@ public class BuildingFloor : Destructable {
     public override void DecreaseHealth() {
         if (listFurnitures.Count < 1) {
             base.DecreaseHealth();
+
+            // Enable the next floor to be destroyed
+            BuildingManager building = transform.parent.GetComponent<BuildingManager>();
+            building.stkFloors.Pop();
+            building.ResetFloorHealth();
         }
     }
 

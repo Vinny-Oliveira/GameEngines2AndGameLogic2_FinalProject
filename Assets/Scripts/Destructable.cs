@@ -9,31 +9,23 @@ public abstract class Destructable : MonoBehaviour {
 
     [SerializeField]
     int health;
+    bool canDestroy = false;
+
+    /// <summary>
+    /// Getter of canDestroy
+    /// </summary>
+    /// <returns></returns>
+    public bool GetCanDestroy() {
+        return canDestroy;
+    }
 
     /// <summary>
     /// Reset health according to value of the destructable SO
     /// </summary>
     public void ResetHealth() {
+        canDestroy = true;
         health = destructable.intHealth;
     }
-
-    ///// <summary>
-    ///// Reset health of a destructable object
-    ///// </summary>
-    ///// <param name="listDestructables"></param>
-    //public void ResetHealth(ref Destructable myDestructable) {
-    //    myDestructable.ResetHealth();
-    //}
-    
-    ///// <summary>
-    ///// Reset health of a list of destructables
-    ///// </summary>
-    ///// <param name="listDestructables"></param>
-    //public void ResetHealth(ref List<Destructable> listDestructables) {
-    //    foreach (Destructable destructable in listDestructables) {
-    //        destructable.ResetHealth();
-    //    }
-    //}
 
     /// <summary>
     /// Decrease health of the destructable object

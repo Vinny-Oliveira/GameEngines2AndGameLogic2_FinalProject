@@ -15,14 +15,19 @@ public class BuildingManager : MonoBehaviour {
         stkFloors = new Stack<BuildingFloor>(listFloors);
 
         // Reset the health of the floor and all its furniture
+        ResetFloorHealth();
+    }
+
+    /// <summary>
+    /// Reset the health of the floor and all its furniture
+    /// </summary>
+    public void ResetFloorHealth() {
         BuildingFloor floor = stkFloors.Peek();
         floor.ResetHealth();
         var listFurns = floor.listFurnitures;
-        
+
         foreach (Furniture furniture in listFurns) {
             furniture.ResetHealth();
         }
     }
-
-
 }
