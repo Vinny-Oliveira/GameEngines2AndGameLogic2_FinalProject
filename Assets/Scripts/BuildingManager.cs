@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour {
 
-    public Stack<BuildingFloor> stkFloors;
+    public Stack<Floor> stkFloors;
+    public GameObject pnl_Win;
 
     // Start is called before the first frame update
     void Start() {
         // Populate the stack of building floors
-        List<BuildingFloor> listFloors = new List<BuildingFloor>();
-        GetComponentsInChildren<BuildingFloor>(listFloors);
-        stkFloors = new Stack<BuildingFloor>(listFloors);
+        List<Floor> listFloors = new List<Floor>();
+        GetComponentsInChildren<Floor>(listFloors);
+        stkFloors = new Stack<Floor>(listFloors);
 
         // Reset the health of the floor and all its furniture
         ResetFloorHealth();
@@ -22,7 +23,7 @@ public class BuildingManager : MonoBehaviour {
     /// </summary>
     public void ResetFloorHealth() {
         if (stkFloors.Count > 0) {
-            BuildingFloor floor = stkFloors.Peek();
+            Floor floor = stkFloors.Peek();
             floor.ResetHealth();
             floor.PopulateFloor();
             var listFurns = floor.GetListFurniture();
@@ -30,6 +31,9 @@ public class BuildingManager : MonoBehaviour {
             foreach (Furniture furniture in listFurns) {
                 furniture.ResetHealth();
             }
+        
+        } else { // All floors destroyed = player wins
+            pnl_Win.SetActive(true);
         }
     }
 }

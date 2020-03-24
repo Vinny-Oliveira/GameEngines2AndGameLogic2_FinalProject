@@ -8,7 +8,7 @@ public class Furniture : Destructible {
     /// When disabled, remove itself from the list of Furniture objects
     /// </summary>
     private void OnDisable() {
-        BuildingFloor floor = transform.parent.GetComponent<BuildingFloor>();
+        Floor floor = transform.parent.GetComponent<Floor>();
         floor.GetListFurniture().Remove(this);
     }
 
