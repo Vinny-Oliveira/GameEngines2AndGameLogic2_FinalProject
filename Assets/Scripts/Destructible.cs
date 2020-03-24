@@ -10,13 +10,13 @@ public abstract class Destructible : MonoBehaviour {
     int health;
     bool canDestroy = false;
 
-    /// <summary>
-    /// Getter of canDestroy
-    /// </summary>
-    /// <returns></returns>
-    public bool GetCanDestroy() {
-        return canDestroy;
-    }
+    ///// <summary>
+    ///// Getter of canDestroy
+    ///// </summary>
+    ///// <returns></returns>
+    //public bool GetCanDestroy() {
+    //    return canDestroy;
+    //}
 
     /// <summary>
     /// Reset health according to value of the destructable SO
@@ -37,4 +37,12 @@ public abstract class Destructible : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Event to detect mouse of touch down
+    /// </summary>
+    private void OnMouseDown() {
+        if (canDestroy) {
+            DecreaseHealth();
+        }
+    }
 }
