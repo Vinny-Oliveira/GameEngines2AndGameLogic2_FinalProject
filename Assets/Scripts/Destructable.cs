@@ -6,6 +6,7 @@ public abstract class Destructable : MonoBehaviour {
 
     [SerializeField]
     DestructableSO destructable;
+
     [SerializeField]
     int health;
 
@@ -16,28 +17,28 @@ public abstract class Destructable : MonoBehaviour {
         health = destructable.intHealth;
     }
 
-    /// <summary>
-    /// Reset health of a destructable object
-    /// </summary>
-    /// <param name="listDestructables"></param>
-    public void ResetHealth(ref Destructable myDestructable) {
-        myDestructable.ResetHealth();
-    }
+    ///// <summary>
+    ///// Reset health of a destructable object
+    ///// </summary>
+    ///// <param name="listDestructables"></param>
+    //public void ResetHealth(ref Destructable myDestructable) {
+    //    myDestructable.ResetHealth();
+    //}
     
-    /// <summary>
-    /// Reset health of a list of destructables
-    /// </summary>
-    /// <param name="listDestructables"></param>
-    public void ResetHealth(ref List<Destructable> listDestructables) {
-        foreach (Destructable destructable in listDestructables) {
-            destructable.ResetHealth();
-        }
-    }
+    ///// <summary>
+    ///// Reset health of a list of destructables
+    ///// </summary>
+    ///// <param name="listDestructables"></param>
+    //public void ResetHealth(ref List<Destructable> listDestructables) {
+    //    foreach (Destructable destructable in listDestructables) {
+    //        destructable.ResetHealth();
+    //    }
+    //}
 
     /// <summary>
     /// Decrease health of the destructable object
     /// </summary>
-    public void DecreaseHealth() {
+    public virtual void DecreaseHealth() {
         health--;
 
         if (health < 1) {

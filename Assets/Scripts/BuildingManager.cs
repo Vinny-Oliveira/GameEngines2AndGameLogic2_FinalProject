@@ -11,8 +11,10 @@ public class BuildingManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        // Populate the stack of building floors
         stkFloors = new Stack<BuildingFloor>(listFloors);
 
+        // Reset the health of the floor and all its furniture
         BuildingFloor floor = stkFloors.Peek();
         floor.ResetHealth();
         var listFurns = floor.listFurnitures;
