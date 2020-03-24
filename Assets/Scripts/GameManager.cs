@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour {
         // If there is a successful hit
         if (Physics.Raycast(ray, out hit, 100)) {
             // If you hit a furniture, decrease its health
-            if (hit.collider.gameObject.TryGetComponent(out Furniture furniture)) {
-                furniture.DecreaseHealth();
+            if (hit.collider.gameObject.TryGetComponent(out Destructable destructable)) {
+                destructable.DecreaseHealth();
             }
         }
     }
