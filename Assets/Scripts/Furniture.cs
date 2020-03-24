@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Furniture : Destructable {
+public class Furniture : Destructible {
 
     /// <summary>
     /// When disabled, remove itself from the list of Furniture objects

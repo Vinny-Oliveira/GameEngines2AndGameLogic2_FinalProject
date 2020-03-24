@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingFloor : Destructable {
+public class BuildingFloor : Destructible {
 
     public List<Furniture> listFurnitures = new List<Furniture>();
 

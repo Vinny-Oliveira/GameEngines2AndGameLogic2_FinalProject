@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Destructable : MonoBehaviour {
+public abstract class Destructible : MonoBehaviour {
 
     [SerializeField]
     DestructableSO destructable;
 
-    [SerializeField]
     int health;
     bool canDestroy = false;
 
