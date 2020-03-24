@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 983260697}
   - component: {fileID: 983260696}
   m_Layer: 5
-  m_Name: Timer_Tx
+  m_Name: Timer_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 1101294407}
   - component: {fileID: 1101294406}
   m_Layer: 5
-  m_Name: ToolLife_Tx
+  m_Name: ToolLife_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1700,7 +1700,7 @@ GameObject:
   - component: {fileID: 1521319329}
   - component: {fileID: 1521319328}
   m_Layer: 5
-  m_Name: Shop_Tx
+  m_Name: Shop_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1931,7 +1931,7 @@ GameObject:
   - component: {fileID: 1705693405}
   - component: {fileID: 1705693404}
   m_Layer: 5
-  m_Name: Currency_Tx
+  m_Name: Currency_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 1840019482}
   - component: {fileID: 1840019481}
   m_Layer: 5
-  m_Name: TimeBuster_Tx
+  m_Name: TimeBuster_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
