@@ -8,15 +8,13 @@ public class Furniture : MonoBehaviour {
     int health;
 
     // Constructors
-    Furniture() {
+    public Furniture() {
         health = 0;
     }
 
-    Furniture(int new_health) {
+    public Furniture(int new_health) {
         health = new_health;
     }
-
-    // Member methods
 
     /// <summary>
     /// Decrease health of the object
