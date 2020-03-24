@@ -6,12 +6,11 @@ public class BuildingManager : MonoBehaviour {
 
     public Stack<BuildingFloor> stkFloors;
 
-    [SerializeField]
-    List<BuildingFloor> listFloors = new List<BuildingFloor>();
-
     // Start is called before the first frame update
     void Start() {
         // Populate the stack of building floors
+        List<BuildingFloor> listFloors = new List<BuildingFloor>();
+        GetComponentsInChildren<BuildingFloor>(listFloors);
         stkFloors = new Stack<BuildingFloor>(listFloors);
 
         // Reset the health of the floor and all its furniture
@@ -25,7 +24,8 @@ public class BuildingManager : MonoBehaviour {
         if (stkFloors.Count > 0) {
             BuildingFloor floor = stkFloors.Peek();
             floor.ResetHealth();
-            var listFurns = floor.listFurnitures;
+            floor.PopulateFloor();
+            var listFurns = floor.GetListFurniture();
 
             foreach (Furniture furniture in listFurns) {
                 furniture.ResetHealth();

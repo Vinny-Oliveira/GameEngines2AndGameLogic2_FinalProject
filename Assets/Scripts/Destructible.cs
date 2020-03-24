@@ -10,14 +10,6 @@ public abstract class Destructible : MonoBehaviour {
     int health;
     bool canDestroy = false;
 
-    ///// <summary>
-    ///// Getter of canDestroy
-    ///// </summary>
-    ///// <returns></returns>
-    //public bool GetCanDestroy() {
-    //    return canDestroy;
-    //}
-
     /// <summary>
     /// Reset health according to value of the destructable SO
     /// </summary>

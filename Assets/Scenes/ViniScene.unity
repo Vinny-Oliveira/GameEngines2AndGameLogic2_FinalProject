@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 412171907}
   - component: {fileID: 412171910}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Furniture_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,50 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
---- !u!1 &447402410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 447402411}
-  - component: {fileID: 447402412}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &447402411
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447402410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.074564256, y: 1.9334892, z: -0.08784015}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &447402412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447402410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a119829bb79ff46b86570cbffa5d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 963194227}
 --- !u!1 &512656100
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +242,7 @@ GameObject:
   - component: {fileID: 512656101}
   - component: {fileID: 512656105}
   m_Layer: 0
-  m_Name: Floor1
+  m_Name: Floor_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512656100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.074564256, y: -0.4334892, z: 0.08784015}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children:
   - {fileID: 412171906}
@@ -382,10 +338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
-  listFurnitures:
-  - {fileID: 412171910}
-  - {fileID: 1036302372}
-  - {fileID: 1333900841}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +527,7 @@ GameObject:
   - component: {fileID: 1020699672}
   - component: {fileID: 1020699675}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: Furniture_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,7 +634,7 @@ GameObject:
   - component: {fileID: 1036302369}
   - component: {fileID: 1036302372}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Furniture_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +741,7 @@ GameObject:
   - component: {fileID: 1180816725}
   - component: {fileID: 1180816728}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Furniture_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,7 +848,7 @@ GameObject:
   - component: {fileID: 1333900838}
   - component: {fileID: 1333900841}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: Furniture_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,9 +970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e04011791904845a21653ce0926982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listFloors:
-  - {fileID: 1805446263}
-  - {fileID: 512656105}
 --- !u!4 &1392662500
 Transform:
   m_ObjectHideFlags: 0
@@ -1035,7 +984,7 @@ Transform:
   - {fileID: 1805446262}
   - {fileID: 512656104}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805446258
 GameObject:
@@ -1051,7 +1000,7 @@ GameObject:
   - component: {fileID: 1805446259}
   - component: {fileID: 1805446263}
   m_Layer: 0
-  m_Name: Floor0
+  m_Name: Floor_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1125,7 +1074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805446258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.074564256, y: -1.9334892, z: 0.08784015}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children:
   - {fileID: 1964398816}
@@ -1147,10 +1096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
-  listFurnitures:
-  - {fileID: 1964398820}
-  - {fileID: 1180816728}
-  - {fileID: 1020699675}
 --- !u!1 &1964398815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1110,7 @@ GameObject:
   - component: {fileID: 1964398817}
   - component: {fileID: 1964398820}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Furniture_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

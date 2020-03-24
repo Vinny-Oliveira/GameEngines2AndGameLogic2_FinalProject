@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Wall
   m_EditorClassIdentifier: 
   strName: Wall
-  intHealth: 1
+  intHealth: 2

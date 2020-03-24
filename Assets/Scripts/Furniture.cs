@@ -9,7 +9,7 @@ public class Furniture : Destructible {
     /// </summary>
     private void OnDisable() {
         BuildingFloor floor = transform.parent.GetComponent<BuildingFloor>();
-        floor.listFurnitures.Remove(this);
+        floor.GetListFurniture().Remove(this);
     }
 
 }

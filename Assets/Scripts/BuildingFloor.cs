@@ -4,7 +4,22 @@ using UnityEngine;
 
 public class BuildingFloor : Destructible {
 
-    public List<Furniture> listFurnitures = new List<Furniture>();
+    List<Furniture> listFurnitures = new List<Furniture>();
+
+    /// <summary>
+    /// Getter of the list of furnitures
+    /// </summary>
+    /// <returns></returns>
+    public List<Furniture> GetListFurniture() {
+        return listFurnitures;
+    }
+
+    /// <summary>
+    /// Populate the list of Furniture objects that are children of this Floor
+    /// </summary>
+    public void PopulateFloor() {
+        GetComponentsInChildren<Furniture>(listFurnitures);
+    }
 
     /// <summary>
     /// Only decrease the health of the floor if all the furniture has been destroyed
@@ -12,12 +27,15 @@ public class BuildingFloor : Destructible {
     public override void DecreaseHealth() {
         if (listFurnitures.Count < 1) {
             base.DecreaseHealth();
-
-            // Enable the next floor to be destroyed
-            BuildingManager building = transform.parent.GetComponent<BuildingManager>();
-            building.stkFloors.Pop();
-            building.ResetFloorHealth();
         }
     }
 
+    /// <summary>
+    /// Enable the next floor to be destroyed
+    /// </summary>
+    private void OnDisable() {
+        BuildingManager building = transform.parent.GetComponent<BuildingManager>();
+        building.stkFloors.Pop();
+        building.ResetFloorHealth();
+    }
 }
