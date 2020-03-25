@@ -8,7 +8,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "myDestructable", menuName = "Destructable/DestructableSO", order = 1)]
 public class DestructableSO : ScriptableObject {
 
-    public string strName;
     public int intHealth;
     public int intCoinValue;
 

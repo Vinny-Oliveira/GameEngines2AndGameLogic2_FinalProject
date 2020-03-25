@@ -29,7 +29,7 @@ public class CoinManager : MonoBehaviour {
     /// </summary>
     /// <param name="movedCoins"></param>
     public void MoveCoins(int movedCoins) {
-        if ((movedCoins < 0) && (intCoins + movedCoins < 0)) {
+        if (intCoins + movedCoins < 0) {
             Debug.Log("Negative coins not allowed");
             return;
         } else {

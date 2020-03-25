@@ -7,32 +7,24 @@ public abstract class Destructible : MonoBehaviour {
     [SerializeField]
     DestructableSO destructable;
 
-    int health;
+    int intHealth;
     bool canDestroy = false;
-
-    ///// <summary>
-    ///// Get the value of how many coins this object awards
-    ///// </summary>
-    ///// <returns></returns>
-    //public int GetCoinValue() {
-    //    return destructable.intCoinValue;
-    //}
 
     /// <summary>
     /// Reset health according to value of the destructable SO
     /// </summary>
     public void ResetHealth() {
         canDestroy = true;
-        health = destructable.intHealth;
+        intHealth = destructable.intHealth;
     }
 
     /// <summary>
     /// Decrease health of the destructable object
     /// </summary>
     public virtual void DecreaseHealth() {
-        health--;
+        intHealth--;
 
-        if (health < 1) {
+        if (intHealth < 1) {
             gameObject.SetActive(false);
         }
     }
