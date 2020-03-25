@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74cad2e19aa0b4489b83ce4f64d386d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intTimer: 0
+  intTimer: 15
   tmpTimer: {fileID: 58799875}
   pnl_GameOver: {fileID: 5060673162905644703}
 --- !u!4 &1751187089
