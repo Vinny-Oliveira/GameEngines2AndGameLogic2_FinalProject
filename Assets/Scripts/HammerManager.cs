@@ -12,7 +12,6 @@ public class HammerManager : MonoBehaviour {
     public Text tmpHammerCount;
     public GameObject pnl_GameOver;
 
-    public static bool canHit;
     public static HammerManager instance;
 
     private void Awake() {
@@ -21,7 +20,6 @@ public class HammerManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        canHit = true;
         PopulateHammerQueue(intStartingHammers);
         tmpHammerCount.text = queHammers.Count.ToString();
     }
