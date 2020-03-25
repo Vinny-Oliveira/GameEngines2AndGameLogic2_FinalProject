@@ -8,8 +8,7 @@ public class HammerManager : MonoBehaviour {
 
     Queue<Hammer> queHammers = new Queue<Hammer>();
     public int intStartingHammers;
-    //public TextMeshProUGUI tmpHammerCount;
-    public Text tmpHammerCount;
+    public TextMeshProUGUI tmpHammerCount;
     public GameObject pnl_GameOver;
 
     public static HammerManager instance;

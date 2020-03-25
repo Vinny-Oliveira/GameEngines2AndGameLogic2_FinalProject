@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 551382043506674915}
   - component: {fileID: 551382043506674912}
   m_Layer: 5
-  m_Name: ToolLife_tmp
+  m_Name: HammerHealth_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

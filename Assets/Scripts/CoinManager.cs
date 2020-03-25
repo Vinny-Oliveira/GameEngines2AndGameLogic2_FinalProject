@@ -11,8 +11,7 @@ public class CoinManager : MonoBehaviour {
     const int START_COINS = 0;
 
     // UI References
-    //public TextMeshProUGUI tmpCoins;
-    public Text tmpCoins;
+    public TextMeshProUGUI tmpCoins;
 
     public static CoinManager instance;
 
