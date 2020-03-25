@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Hammer {
 
-    int intHealth;
+    public int intHealth;
 
     const int HAMMER_MAX_HEALTH = 10;
 
     /// <summary>
     /// No-args Constructor of the Hammer
     /// </summary>
-    Hammer() {
+    public Hammer() {
         intHealth = HAMMER_MAX_HEALTH;
     }
 
