@@ -10,13 +10,13 @@ public abstract class Destructible : MonoBehaviour {
     int health;
     bool canDestroy = false;
 
-    /// <summary>
-    /// Get the value of how many coins this object awards
-    /// </summary>
-    /// <returns></returns>
-    public int GetCoinValue() {
-        return destructable.intCoinValue;
-    }
+    ///// <summary>
+    ///// Get the value of how many coins this object awards
+    ///// </summary>
+    ///// <returns></returns>
+    //public int GetCoinValue() {
+    //    return destructable.intCoinValue;
+    //}
 
     /// <summary>
     /// Reset health according to value of the destructable SO
@@ -44,5 +44,12 @@ public abstract class Destructible : MonoBehaviour {
         if (canDestroy) {
             DecreaseHealth();
         }
+    }
+
+    /// <summary>
+    /// Award the player with an amount of coins defined in this destructible
+    /// </summary>
+    public virtual void OnDisable() {
+        CoinManager.instance.MoveCoins(destructable.intCoinValue);
     }
 }
