@@ -76,7 +76,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Nice! '
+  m_Text: NICE!
 --- !u!1 &3849598727822809050
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 3849598728312299499}
   - component: {fileID: 3849598728312299498}
   m_Layer: 5
-  m_Name: MainMenu_Btn
+  m_Name: LevelSelect_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3849598728522468304}
   - component: {fileID: 3849598728522468311}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LvlSelectBTN_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu
+  m_Text: Level Select
 --- !u!1 &3849598728648254349
 GameObject:
   m_ObjectHideFlags: 0
