@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Hammer {
 
-    public int intHealth;
+    int intHealth;
 
-    const int HAMMER_MAX_HEALTH = 10;
+    const int HAMMER_MAX_HEALTH = 5;
 
     /// <summary>
     /// No-args Constructor of the Hammer
@@ -28,5 +28,13 @@ public class Hammer {
     /// </summary>
     public void DecreaseHealth() {
         intHealth--;
+    }
+
+    /// <summary>
+    /// Check if the hammer's health is less than zero
+    /// </summary>
+    /// <returns></returns>
+    public bool IsHammerBroken() {
+        return (intHealth < 1);
     }
 }

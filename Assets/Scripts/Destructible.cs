@@ -35,6 +35,7 @@ public abstract class Destructible : MonoBehaviour {
     private void OnMouseDown() {
         if (canDestroy) {
             DecreaseHealth();
+            HammerManager.instance.HitAnObject();
         }
     }
 
