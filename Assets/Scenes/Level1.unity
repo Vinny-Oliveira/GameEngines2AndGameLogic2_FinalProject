@@ -2295,5 +2295,50 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 551382043427382196, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_Name
+      value: TimeBooster_Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044102528328, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_Name
+      value: TimeBooster_tmp
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843890, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_Name
+      value: tIMEBooSTER_tmp
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_text
+      value: "TIME \nBOOSTER"
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 551382044566843901, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3376
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3154525c82d34b84aaf0fb365c478328, type: 3}
