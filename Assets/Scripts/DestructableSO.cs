@@ -10,5 +10,6 @@ public class DestructableSO : ScriptableObject {
 
     public string strName;
     public int intHealth;
+    public int intCoinValue;
 
 }

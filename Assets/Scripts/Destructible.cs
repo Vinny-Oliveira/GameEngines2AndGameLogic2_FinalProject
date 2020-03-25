@@ -11,6 +11,14 @@ public abstract class Destructible : MonoBehaviour {
     bool canDestroy = false;
 
     /// <summary>
+    /// Get the value of how many coins this object awards
+    /// </summary>
+    /// <returns></returns>
+    public int GetCoinValue() {
+        return destructable.intCoinValue;
+    }
+
+    /// <summary>
     /// Reset health according to value of the destructable SO
     /// </summary>
     public void ResetHealth() {
