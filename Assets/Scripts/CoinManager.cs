@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class CoinManager : MonoBehaviour {
+public class CoinManager : SingletonManager<CoinManager> {
 
     // Count of the player's coins
     int intCoins;
@@ -12,12 +12,6 @@ public class CoinManager : MonoBehaviour {
 
     // UI References
     public TextMeshProUGUI tmpCoins;
-
-    public static CoinManager instance;
-
-    private void Awake() {
-        instance = this;
-    }
 
     private void Start() {
         intCoins = START_COINS;

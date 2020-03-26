@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HammerManager : MonoBehaviour {
+public class HammerManager : SingletonManager<HammerManager> {
 
     Queue<Hammer> queHammers = new Queue<Hammer>();
 
@@ -16,12 +16,6 @@ public class HammerManager : MonoBehaviour {
     public TextMeshProUGUI tmpHammerCount;
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
-
-    public static HammerManager instance;
-
-    private void Awake() {
-        instance = this;
-    }
 
     // Start is called before the first frame update
     void Start() {
