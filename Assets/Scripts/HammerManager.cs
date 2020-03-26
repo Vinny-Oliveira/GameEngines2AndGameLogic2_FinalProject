@@ -37,15 +37,16 @@ public class HammerManager : SingletonManager<HammerManager> {
     /// The Hammer in the beginning of the queue hits an object and loses health
     /// </summary>
     public void HitAnObject() {
+        if (queHammers.Count < 1) {
+            WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
+            return;
+        }
+        
         queHammers.Peek().DecreaseHealth();
         
         if (queHammers.Peek().IsHammerBroken()) {
             queHammers.Dequeue();
             tmpHammerCount.text = queHammers.Count.ToString();
-
-            if (queHammers.Count < 1) {
-                WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
-            }
         }
     }
 }

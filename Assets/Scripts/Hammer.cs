@@ -12,7 +12,7 @@ public class Hammer {
     /// No-args Constructor of the Hammer
     /// </summary>
     public Hammer() {
-        intHealth = HAMMER_MAX_HEALTH;
+        new Hammer(HAMMER_MAX_HEALTH);
     }
 
     /// <summary>
