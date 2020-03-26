@@ -16,6 +16,14 @@ public class Hammer {
     }
 
     /// <summary>
+    /// Constructor with custom health
+    /// </summary>
+    /// <param name="newHealth"></param>
+    public Hammer(int newHealth) {
+        intHealth = newHealth;
+    }
+
+    /// <summary>
     /// Getter of the hammer health
     /// </summary>
     /// <returns></returns>

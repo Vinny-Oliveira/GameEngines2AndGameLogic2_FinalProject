@@ -6,7 +6,10 @@ using TMPro;
 
 public class TimerManager : MonoBehaviour {
 
+    [Header("Starting Time")]
     public int intTimer;
+
+    [Header("UI References")]
     public TextMeshProUGUI tmpTimer;
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
@@ -22,7 +25,7 @@ public class TimerManager : MonoBehaviour {
     /// <returns></returns>
     IEnumerator DisplayTimer() {
 
-        while (intTimer > -1) {
+        while ((intTimer > -1) && (!pnl_GameOver.activeInHierarchy)) {
             yield return new WaitForSeconds(1);
 
             int intMinutes = intTimer / 60;

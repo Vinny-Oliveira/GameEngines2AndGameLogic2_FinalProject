@@ -7,7 +7,12 @@ using TMPro;
 public class HammerManager : MonoBehaviour {
 
     Queue<Hammer> queHammers = new Queue<Hammer>();
+
+    [Header("Hammer Management")]
     public int intStartingHammers;
+    public int intHammerHealth;
+    
+    [Header("UI References")]
     public TextMeshProUGUI tmpHammerCount;
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
@@ -20,7 +25,7 @@ public class HammerManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        PopulateHammerQueue(intStartingHammers);
+        PopulateHammerQueue(intStartingHammers, intHammerHealth);
         tmpHammerCount.text = queHammers.Count.ToString();
     }
 
@@ -28,9 +33,9 @@ public class HammerManager : MonoBehaviour {
     /// Populate the queue of hammers with the starting number of hammers
     /// </summary>
     /// <param name="amountHammers"></param>
-    public void PopulateHammerQueue(int amountHammers) { 
+    public void PopulateHammerQueue(int amountHammers, int healthOfHammers) { 
         for (int i = 0; i < amountHammers; i++) {
-            queHammers.Enqueue(new Hammer());
+            queHammers.Enqueue(new Hammer(healthOfHammers));
         }
     }
 
