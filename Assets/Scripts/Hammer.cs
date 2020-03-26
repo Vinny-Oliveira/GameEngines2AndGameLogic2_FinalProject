@@ -6,13 +6,13 @@ public class Hammer {
 
     int intHealth;
 
-    const int HAMMER_MAX_HEALTH = 5;
+    static int defaultMaxHealth = 5;
 
     /// <summary>
     /// No-args Constructor of the Hammer
     /// </summary>
     public Hammer() {
-        new Hammer(HAMMER_MAX_HEALTH);
+        intHealth = defaultMaxHealth;
     }
 
     /// <summary>
