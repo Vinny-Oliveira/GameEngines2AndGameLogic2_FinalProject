@@ -44,8 +44,7 @@ public class HammerManager : SingletonManager<HammerManager> {
             tmpHammerCount.text = queHammers.Count.ToString();
 
             if (queHammers.Count < 1) {
-                CoinManager.instance.GetCoinNumber(tmpReward);
-                pnl_GameOver.SetActive(true);
+                WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
             }
         }
     }

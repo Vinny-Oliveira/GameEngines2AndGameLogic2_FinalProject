@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TimerManager : MonoBehaviour {
+public class TimerManager : SingletonManager<TimerManager> {
 
     [Header("Starting Time")]
     public int intTimer;
@@ -14,8 +14,11 @@ public class TimerManager : MonoBehaviour {
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
 
+    bool isTimerEnabled;
+
     // Start is called before the first frame update
     void Start() {
+        isTimerEnabled = true;
         StartCoroutine(DisplayTimer());
     }
 
@@ -25,7 +28,7 @@ public class TimerManager : MonoBehaviour {
     /// <returns></returns>
     IEnumerator DisplayTimer() {
 
-        while ((intTimer > -1) && (!pnl_GameOver.activeInHierarchy)) {
+        while ((intTimer > -1) && (isTimerEnabled)) {
             yield return new WaitForSeconds(1);
 
             int intMinutes = intTimer / 60;
@@ -38,7 +41,15 @@ public class TimerManager : MonoBehaviour {
             intTimer--;
         }
 
-        CoinManager.instance.GetCoinNumber(tmpReward);
-        pnl_GameOver.SetActive(true);
+        if (intTimer < 1) { 
+            WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
+        }
+    }
+
+    /// <summary>
+    /// Disable the timer
+    /// </summary>
+    public void DisableTimer() {
+        isTimerEnabled = false;
     }
 }

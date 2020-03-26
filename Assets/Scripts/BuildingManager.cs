@@ -35,8 +35,7 @@ public class BuildingManager : MonoBehaviour {
             }
         
         } else { // All floors destroyed = player wins
-            CoinManager.instance.GetCoinNumber(tmpReward);
-            pnl_Win.SetActive(true);
+            WinLossManager.DisplayWinLossPanel(pnl_Win, tmpReward);
         }
     }
 }
