@@ -24,6 +24,22 @@ public class CoinManager : MonoBehaviour {
     }
 
     /// <summary>
+    /// Get the total number of coins
+    /// </summary>
+    /// <returns></returns>
+    public int GetCoinNumber() {
+        return intCoins;
+    }
+
+    /// <summary>
+    /// Update a text field with the number of coins
+    /// </summary>
+    /// <param name="tmpCoinNumber"></param>
+    public void GetCoinNumber(TextMeshProUGUI tmpCoinNumber) {
+        tmpCoinNumber.text = "You earned: " + intCoins + " coins";
+    }
+
+    /// <summary>
     /// Add or remove coins to the total coin count
     /// </summary>
     /// <param name="movedCoins"></param>

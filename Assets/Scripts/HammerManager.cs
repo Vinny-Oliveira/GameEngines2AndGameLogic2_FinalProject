@@ -9,6 +9,7 @@ public class HammerManager : MonoBehaviour {
     Queue<Hammer> queHammers = new Queue<Hammer>();
     public int intStartingHammers;
     public TextMeshProUGUI tmpHammerCount;
+    public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
 
     public static HammerManager instance;
@@ -44,6 +45,7 @@ public class HammerManager : MonoBehaviour {
             tmpHammerCount.text = queHammers.Count.ToString();
 
             if (queHammers.Count < 1) {
+                CoinManager.instance.GetCoinNumber(tmpReward);
                 pnl_GameOver.SetActive(true);
             }
         }

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BuildingManager : MonoBehaviour {
 
     public Stack<Floor> stkFloors;
     public GameObject pnl_Win;
+    public TextMeshProUGUI tmpReward;
 
     // Start is called before the first frame update
     void Start() {
@@ -33,6 +35,7 @@ public class BuildingManager : MonoBehaviour {
             }
         
         } else { // All floors destroyed = player wins
+            CoinManager.instance.GetCoinNumber(tmpReward);
             pnl_Win.SetActive(true);
         }
     }
