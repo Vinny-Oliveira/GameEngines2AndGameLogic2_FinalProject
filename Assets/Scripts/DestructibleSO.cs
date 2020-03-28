@@ -5,8 +5,8 @@ using UnityEngine;
 /// <summary>
 /// Destructable sciptable object
 /// </summary>
-[CreateAssetMenu(fileName = "myDestructable", menuName = "Destructable/DestructableSO", order = 1)]
-public class DestructableSO : ScriptableObject {
+[CreateAssetMenu(fileName = "myDestructible", menuName = "Destructible/DestructibleSO", order = 1)]
+public class DestructibleSO : ScriptableObject {
 
     public int intHealth;
     public int intCoinValue;

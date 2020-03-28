@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!114 &502231102 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c51fab5f68ee6141a9351e06bd3e7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
+  destructible: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
 --- !u!1 &669865866
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c51fab5f68ee6141a9351e06bd3e7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
+  destructible: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
 --- !u!65 &669865869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &765161783
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &773763751
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &784866322
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!1 &1036302367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!1 &1141747445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &1141747448
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c51fab5f68ee6141a9351e06bd3e7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
+  destructible: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
 --- !u!65 &1153928546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!1 &1333900836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!1 &1392662498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c51fab5f68ee6141a9351e06bd3e7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
+  destructible: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
 --- !u!1 &1821879769
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &1912232160
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!1 &1984354619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &1984354622
 SphereCollider:
   m_ObjectHideFlags: 0

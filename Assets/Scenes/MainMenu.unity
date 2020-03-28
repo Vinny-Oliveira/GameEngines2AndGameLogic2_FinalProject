@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c51fab5f68ee6141a9351e06bd3e7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
+  destructible: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
 --- !u!65 &10235219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &39094830
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &542961203
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &674154015
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3201,7 +3201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &1028082118
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3628,7 +3628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c51fab5f68ee6141a9351e06bd3e7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
+  destructible: {fileID: 11400000, guid: 563ddcdc64d3ee64c83df1d97a7e18b2, type: 2}
 --- !u!65 &1262104693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3808,7 +3808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &1304304915
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4860,7 +4860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructable: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
+  destructible: {fileID: 11400000, guid: 2b6285d3abfa4574ea68639e8f073b2f, type: 2}
 --- !u!135 &2101977350
 SphereCollider:
   m_ObjectHideFlags: 0

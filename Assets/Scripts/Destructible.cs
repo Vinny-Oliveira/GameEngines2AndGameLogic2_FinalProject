@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Destructible : MonoBehaviour {
 
     [SerializeField]
-    DestructableSO destructable;
+    DestructibleSO destructible;
 
     int intHealth;
     bool canDestroy = false;
@@ -15,7 +15,7 @@ public abstract class Destructible : MonoBehaviour {
     /// </summary>
     public void ResetHealth() {
         canDestroy = true;
-        intHealth = destructable.intHealth;
+        intHealth = destructible.intHealth;
     }
 
     /// <summary>
@@ -43,6 +43,6 @@ public abstract class Destructible : MonoBehaviour {
     /// Award the player with an amount of coins defined in this destructible
     /// </summary>
     public virtual void OnDisable() {
-        CoinManager.instance.MoveCoins(destructable.intCoinValue);
+        CoinManager.instance.MoveCoins(destructible.intCoinValue);
     }
 }
