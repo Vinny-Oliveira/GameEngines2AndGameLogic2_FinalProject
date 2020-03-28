@@ -33,8 +33,8 @@ public class Floor : Destructible {
     /// <summary>
     /// Enable the next floor to be destroyed
     /// </summary>
-    public override void OnDisable() {
-        base.OnDisable();
+    public override void DisableObject() {
+        base.DisableObject();
         BuildingManager building = transform.parent.GetComponent<BuildingManager>();
         building.stkFloors.Pop();
         building.ResetFloorHealth();

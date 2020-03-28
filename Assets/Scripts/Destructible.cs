@@ -26,6 +26,7 @@ public abstract class Destructible : MonoBehaviour {
 
         if (intHealth < 1) {
             gameObject.SetActive(false);
+            DisableObject();
         }
     }
 
@@ -42,7 +43,7 @@ public abstract class Destructible : MonoBehaviour {
     /// <summary>
     /// Award the player with an amount of coins defined in this destructible
     /// </summary>
-    public virtual void OnDisable() {
+    public virtual void DisableObject() {
         CoinManager.instance.MoveCoins(destructible.intCoinValue);
     }
 }
