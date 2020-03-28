@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 3686018309529518662}
   - component: {fileID: 8837419303438686743}
   - component: {fileID: 2412520627782425889}
+  - component: {fileID: 1834577706023427190}
   m_Layer: 5
   m_Name: LvlSelected_Btn
   m_TagString: Untagged
@@ -811,7 +812,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8837419303438686743}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1834577706023427190}
+        m_MethodName: LoadScene
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 102900000, guid: 8d15a9c00ef94154fab20653866097df,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1834577706023427190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817747872482395683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7977027155494a4cb7546879f943ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4949078530640508435
 GameObject:
   m_ObjectHideFlags: 0
