@@ -6,7 +6,7 @@ using TMPro;
 public class WinLossManager {
 
     /// <summary>
-    /// Display the panel for or loss condition, whichever one is passed
+    /// Display the panel for win or loss condition, whichever one is passed
     /// </summary>
     /// <param name="winLossPanel"></param>
     public static void DisplayWinLossPanel(GameObject winLossPanel, TextMeshProUGUI tmpReward) {
