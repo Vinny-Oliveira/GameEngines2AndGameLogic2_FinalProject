@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
-  m_Name: Armoire
+  m_Name: Couch
   m_EditorClassIdentifier: 
-  intHealth: 5
-  intCoinValue: 20
+  intHealth: 6
+  intCoinValue: 15
