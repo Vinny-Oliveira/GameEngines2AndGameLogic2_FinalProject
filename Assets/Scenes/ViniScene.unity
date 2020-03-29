@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intStartingHammers: 2
-  intHammerHealth: 500
+  intHammerHealth: 5
   tmpHammerCount: {fileID: 5060673162905644705}
   tmpReward: {fileID: 980391135}
   pnl_GameOver: {fileID: 5060673162905644703}
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74cad2e19aa0b4489b83ce4f64d386d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intTimer: 9999
+  intTimer: 3
   tmpTimer: {fileID: 58799875}
   tmpReward: {fileID: 980391135}
   pnl_GameOver: {fileID: 5060673162905644703}
