@@ -382,6 +382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TVStand_LowPoly_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 4622335976792426397, guid: 7f0e0d1f01ae99e438431a4a050421fb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8538420051062977934, guid: 7f0e0d1f01ae99e438431a4a050421fb,
         type: 3}
       propertyPath: m_LocalPosition.x
