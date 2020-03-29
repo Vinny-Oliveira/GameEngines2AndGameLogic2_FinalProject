@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
   m_Name: DresserType1
   m_EditorClassIdentifier: 
-  intHealth: 0
-  intCoinValue: 0
+  intHealth: 3
+  intCoinValue: 10
