@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class Destructible : MonoBehaviour {
 
@@ -34,6 +35,15 @@ public abstract class Destructible : MonoBehaviour {
     /// Event to detect mouse of touch down
     /// </summary>
     private void OnMouseDown() {
+#if UNITY_EDITOR
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            return;
+        }
+#elif UNITY_ANDROID
+        if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) {
+            return;
+        }
+#endif  
         if (canDestroy) {
             DecreaseHealth();
             HammerManager.instance.HitAnObject();
