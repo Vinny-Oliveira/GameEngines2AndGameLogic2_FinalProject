@@ -89,6 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1859529775238287588}
   - component: {fileID: 4388633269962604049}
+  - component: {fileID: 1918637645}
+  - component: {fileID: 2022405559}
   m_Layer: 0
   m_Name: Bed_LowPoly_v1
   m_TagString: Untagged
@@ -103,9 +105,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3428710061839606519}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
+  m_LocalScale: {x: 0.25000006, y: 0.25, z: 0.25000006}
   m_Children:
   - {fileID: 3278003376317162404}
   - {fileID: 8882954981424440547}
@@ -127,6 +129,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructible: {fileID: 11400000, guid: 0e919d306e28a8a46b34b24bb8459552, type: 2}
+--- !u!65 &1918637645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428710061839606519}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0479302, y: 1.9406891, z: 3.1250334}
+  m_Center: {x: 0.012186289, y: 0.47034454, z: -1.0625167}
+--- !u!65 &2022405559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428710061839606519}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4955146295034848059
 GameObject:
   m_ObjectHideFlags: 0

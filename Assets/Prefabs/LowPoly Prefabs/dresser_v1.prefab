@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2266749268554582474}
   - component: {fileID: 1151963367063096414}
+  - component: {fileID: 1968652976}
   m_Layer: 0
   m_Name: dresser_v1
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2967385808925129689}
   m_LocalRotation: {x: 0, y: 1, z: -0, w: -0.0000001872535}
   m_LocalPosition: {x: 0.313, y: 5, z: 0.395}
-  m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 9122148749784572441}
   m_Father: {fileID: 0}
@@ -45,6 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructible: {fileID: 11400000, guid: 537dcc45251a46a4e8ec91ebe92a0985, type: 2}
+--- !u!65 &1968652976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967385808925129689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3645546, y: 1.1062479, z: 1.2923598}
+  m_Center: {x: -0.035915256, y: -0.34404135, z: 0.0135679245}
 --- !u!1 &5346242780680147011
 GameObject:
   m_ObjectHideFlags: 0

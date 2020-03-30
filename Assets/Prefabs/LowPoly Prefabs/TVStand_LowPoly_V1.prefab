@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8538420051062977934}
   - component: {fileID: 262698533533967156}
+  - component: {fileID: 1440178191}
   m_Layer: 0
   m_Name: TVStand_LowPoly_V1
   m_TagString: Untagged
@@ -103,9 +104,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4622335976792426397}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 1068669395265116941}
   - {fileID: 3448418099178767436}
@@ -129,6 +130,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructible: {fileID: 11400000, guid: c75db3d6534b02f4798843fb76124845, type: 2}
+--- !u!65 &1440178191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622335976792426397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0421944, y: 1.6803303, z: 1}
+  m_Center: {x: 0.0014164448, y: 0.91848564, z: 0}
 --- !u!1 &5583020576403834443
 GameObject:
   m_ObjectHideFlags: 0

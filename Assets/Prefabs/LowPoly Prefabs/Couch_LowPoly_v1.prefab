@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418939023967990471}
   - component: {fileID: 2365826338676942620}
+  - component: {fileID: 1940500561}
   m_Layer: 0
   m_Name: Couch_LowPoly_v1
   m_TagString: Untagged
@@ -103,9 +104,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3714070059203674324}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 2234138209530885206}
   - {fileID: 8689415569994602268}
@@ -126,6 +127,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructible: {fileID: 11400000, guid: 5f0cd89b3f031dd4d916074b575d3854, type: 2}
+--- !u!65 &1940500561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714070059203674324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6267483, y: 1.3529644, z: 1.3280644}
+  m_Center: {x: -0.023074865, y: 0.6706276, z: -0.16403228}
 --- !u!1 &5958053102874031139
 GameObject:
   m_ObjectHideFlags: 0
