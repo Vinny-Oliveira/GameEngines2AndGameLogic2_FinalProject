@@ -3097,10 +3097,9 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1020242217}
         m_MethodName: LoadScene
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 102900000, guid: f9e8adbbabf46ed4791a89ddb98a6ce7,
-            type: 3}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3155,6 +3154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7977027155494a4cb7546879f943ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene:
+    m_SceneAsset: {fileID: 102900000, guid: f9e8adbbabf46ed4791a89ddb98a6ce7, type: 3}
+    m_SceneName: Level 1
 --- !u!1 &1028082115
 GameObject:
   m_ObjectHideFlags: 0
