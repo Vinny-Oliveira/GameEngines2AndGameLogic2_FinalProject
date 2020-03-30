@@ -10,14 +10,15 @@ using TMPro;
 public class CoinManager : SingletonManager<CoinManager> {
 
     // Count of the player's coins
-    int intCoins;
+    static int intBankOfCoins;
+    int intCoinsInLevel;
     const int START_COINS = 0;
 
     // UI References
     public TextMeshProUGUI tmpCoins;
 
     private void Start() {
-        intCoins = START_COINS;
+        intCoinsInLevel = START_COINS;
     }
 
     /// <summary>
@@ -25,7 +26,7 @@ public class CoinManager : SingletonManager<CoinManager> {
     /// </summary>
     /// <returns></returns>
     public int GetCoinNumber() {
-        return intCoins;
+        return intCoinsInLevel;
     }
 
     /// <summary>
@@ -33,20 +34,15 @@ public class CoinManager : SingletonManager<CoinManager> {
     /// </summary>
     /// <param name="tmpCoinNumber"></param>
     public void GetCoinNumber(TextMeshProUGUI tmpCoinNumber) {
-        tmpCoinNumber.text = "You earned: " + intCoins + " coins";
+        tmpCoinNumber.text = "You earned: " + intCoinsInLevel + " coins";
     }
 
     /// <summary>
     /// Add or remove coins to the total coin count
     /// </summary>
-    /// <param name="movedCoins"></param>
-    public void MoveCoins(int movedCoins) {
-        if (intCoins + movedCoins < 0) {
-            Debug.Log("Negative coins not allowed");
-            return;
-        } else {
-            intCoins += movedCoins;
-            tmpCoins.text = intCoins.ToString();
-        }
+    /// <param name="coinsGained"></param>
+    public void GainCoins(int coinsGained) {
+        intCoinsInLevel += coinsGained;
+        tmpCoins.text = intCoinsInLevel.ToString();
     }
 }
