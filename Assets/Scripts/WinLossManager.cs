@@ -13,9 +13,13 @@ public class WinLossManager {
     /// </summary>
     /// <param name="winLossPanel"></param>
     public static void DisplayWinLossPanel(GameObject winLossPanel, TextMeshProUGUI tmpReward) {
+        // Display proper UI information
         TimerManager.instance.DisableTimer();
         CoinManager.instance.GetCoinNumber(tmpReward);
         winLossPanel.SetActive(true);
+
+        // Save the current data
+        CoinManager.instance.SaveCoinsToBank();
     }
 
 }

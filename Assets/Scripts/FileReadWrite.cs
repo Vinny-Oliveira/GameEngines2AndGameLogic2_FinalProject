@@ -7,10 +7,7 @@ using System.IO;
 /// All data that is saved by the user
 /// </summary>
 public struct SavedData {
-    int totalCoins;
-
-    public int GetTotalCoins() { return totalCoins; }
-    public void SetTotalCoins(int newCoins) { totalCoins = newCoins; }
+    public int totalCoins;
 }
 
 /// <summary>
@@ -23,12 +20,28 @@ public class FileReadWrite {
     static SavedData loadedData = new SavedData();
 
     // Json file path
-    static string jsonFilePath = Application.streamingAssetsPath + "savedData.json";
+    static string jsonFilePath = Application.streamingAssetsPath + "/savedData.json";
+
+    /// <summary>
+    /// Get the loaded data
+    /// </summary>
+    /// <returns></returns>
+    public static SavedData GetLoadedData() { 
+        return loadedData; 
+    }
+
+    /// <summary>
+    /// Set new values for the saved data
+    /// </summary>
+    /// <param name="newCoins"></param>
+    public static void SetSavedData(int newCoins) { 
+        savedData.totalCoins = newCoins; 
+    }
 
     /// <summary>
     /// Save a data string to a json file
     /// </summary>
-    public void WriteDataToJson() {
+    public static void WriteDataToJson() {
         Debug.Log("SAVING DATA TO JSON FILE");
 
         string dataString = JsonUtility.ToJson(savedData);
@@ -38,7 +51,7 @@ public class FileReadWrite {
     /// <summary>
     /// Load data from a json file
     /// </summary>
-    public void ReadDataFromJson() {
+    public static void ReadDataFromJson() {
         string dataString = File.ReadAllText(jsonFilePath);
         loadedData = JsonUtility.FromJson<SavedData>(dataString);
     }

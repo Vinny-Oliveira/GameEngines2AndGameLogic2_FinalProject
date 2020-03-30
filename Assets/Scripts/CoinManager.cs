@@ -12,13 +12,14 @@ public class CoinManager : SingletonManager<CoinManager> {
     // Count of the player's coins
     static int intBankOfCoins;
     int intCoinsInLevel;
-    const int START_COINS = 0;
 
     // UI References
     public TextMeshProUGUI tmpCoins;
 
     private void Start() {
-        intCoinsInLevel = START_COINS;
+        intCoinsInLevel = 0;
+        FileReadWrite.ReadDataFromJson();
+        intBankOfCoins = FileReadWrite.GetLoadedData().totalCoins;
     }
 
     /// <summary>
@@ -44,5 +45,17 @@ public class CoinManager : SingletonManager<CoinManager> {
     public void GainCoins(int coinsGained) {
         intCoinsInLevel += coinsGained;
         tmpCoins.text = intCoinsInLevel.ToString();
+    }
+
+    /// <summary>
+    /// Save the total number of coins
+    /// </summary>
+    /// <returns></returns>
+    public void SaveCoinsToBank() {
+        intBankOfCoins += intCoinsInLevel;
+
+        FileReadWrite.SetSavedData(intBankOfCoins);
+        FileReadWrite.WriteDataToJson();
+        Debug.Log("Coins in bank: " + intBankOfCoins);
     }
 }
