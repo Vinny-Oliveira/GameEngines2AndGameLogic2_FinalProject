@@ -1270,8 +1270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3fb8335d7d9684c99acc581df88633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intStartingHammers: 2
-  intHammerHealth: 5
+  intStartingHammers: 3
+  intHammerHealth: 75
   tmpHammerCount: {fileID: 5060673162905644705}
   tmpReward: {fileID: 980391135}
   pnl_GameOver: {fileID: 5060673162905644703}
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74cad2e19aa0b4489b83ce4f64d386d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intTimer: 10
+  intTimer: 9999
   tmpTimer: {fileID: 58799875}
   tmpReward: {fileID: 980391135}
   pnl_GameOver: {fileID: 5060673162905644703}
