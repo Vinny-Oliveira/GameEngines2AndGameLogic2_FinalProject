@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Manage the timer of the level
+/// </summary>
 public class TimerManager : SingletonManager<TimerManager> {
 
     [Header("Starting Time")]

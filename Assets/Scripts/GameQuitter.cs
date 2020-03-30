@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Quit the application
+/// </summary>
 public class GameQuitter : MonoBehaviour {
     
     public void QuitGame() {

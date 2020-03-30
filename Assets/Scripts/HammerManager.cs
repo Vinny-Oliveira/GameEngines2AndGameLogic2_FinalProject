@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Manage all the hammer objects used to destroy the building
+/// </summary>
 public class HammerManager : SingletonManager<HammerManager> {
 
     Queue<Hammer> queHammers = new Queue<Hammer>();

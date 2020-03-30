@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Model all the floors of building
+/// </summary>
 public class Floor : Destructible {
 
     List<Furniture> listFurnitures = new List<Furniture>();

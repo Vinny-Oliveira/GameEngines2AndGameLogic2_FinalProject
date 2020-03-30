@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Model all the furniture of the building
+/// </summary>
 public class Furniture : Destructible {
 
     /// <summary>

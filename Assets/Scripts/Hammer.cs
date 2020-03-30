@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Model Hammer objects that are used to destroy the building of the game
+/// </summary>
 public class Hammer {
 
     int intHealth;

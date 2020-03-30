@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Manage how the floors of the building and their respective furnitures lose health and are organized on the stack
+/// Place this script on the Empty Game Object that holds all the building floors
+/// </summary>
 public class BuildingManager : MonoBehaviour {
 
     public Stack<Floor> stkFloors;

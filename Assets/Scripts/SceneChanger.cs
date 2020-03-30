@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manage how scenes are changed
+/// </summary>
 public class SceneChanger : MonoBehaviour {
 
     public SceneField nextScene;

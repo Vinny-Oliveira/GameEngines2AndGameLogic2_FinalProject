@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Destructable sciptable object
+/// Destructible sciptable object
 /// </summary>
 [CreateAssetMenu(fileName = "myDestructible", menuName = "Destructible/DestructibleSO", order = 1)]
 public class DestructibleSO : ScriptableObject {

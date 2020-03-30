@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*************************************************************************************************************/
+/* Use scenes as references in the inspector and make those work in builds ***********************************/
+/* Credits to glitchers from https://answers.unity.com/questions/242794/inspector-field-for-scene-asset.html */
+/*************************************************************************************************************/
+
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif

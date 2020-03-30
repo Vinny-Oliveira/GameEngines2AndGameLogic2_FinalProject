@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Class that manages what happens when the player wins or loses a level
+/// </summary>
 public class WinLossManager {
 
     /// <summary>

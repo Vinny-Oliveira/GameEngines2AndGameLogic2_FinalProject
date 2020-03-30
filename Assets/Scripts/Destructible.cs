@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Base class that models all the objects that are destructible by game mechanics
+/// </summary>
 public abstract class Destructible : MonoBehaviour {
 
     [SerializeField]

@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Manage how the player gains and spends coins
+/// </summary>
 public class CoinManager : SingletonManager<CoinManager> {
 
     // Count of the player's coins
