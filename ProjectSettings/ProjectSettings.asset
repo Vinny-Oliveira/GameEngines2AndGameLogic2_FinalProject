@@ -757,10 +757,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 711164e5-38ed-4954-b197-dcfe3e4c7406
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: GEnginesLogic2_WildSpreadStudio_AlphaVersion
+  organizationId: unity_ruxg6trgkyfxuq
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
