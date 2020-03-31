@@ -48,12 +48,27 @@ public class CoinManager : SingletonManager<CoinManager> {
     }
 
     /// <summary>
-    /// Save the total number of coins
+    /// Save the total number of coins gained in the level
     /// </summary>
     /// <returns></returns>
     public void SaveCoinsToBank() {
         intBankOfCoins += intCoinsInLevel;
+        SaveBankToFile();
+    }
 
+    /// <summary>
+    /// Save a determined amount of coins
+    /// </summary>
+    /// <returns></returns>
+    public void SaveCoinsToBank(int coinsToSave) {
+        intBankOfCoins += coinsToSave;
+        SaveBankToFile();
+    }
+
+    /// <summary>
+    /// Save the number of coins in the banl to a json file
+    /// </summary>
+    void SaveBankToFile() {
         FileReadWrite.SetSavedData(intBankOfCoins);
         FileReadWrite.WriteDataToJson();
         Debug.Log("Coins in bank: " + intBankOfCoins);
