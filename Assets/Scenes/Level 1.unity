@@ -2718,55 +2718,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_text
-      value: $
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382044514313214, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382044514313214, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 551382044566843900, guid: 3154525c82d34b84aaf0fb365c478328,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709844021395078045, guid: 3154525c82d34b84aaf0fb365c478328,
+    - target: {fileID: 3387187780772808294, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -48.200012
+      value: -48.19995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372882549882265414, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -33.80017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3154525c82d34b84aaf0fb365c478328, type: 3}
