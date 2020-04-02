@@ -57,6 +57,7 @@ public abstract class Destructible : MonoBehaviour {
     /// Award the player with an amount of coins defined in this destructible
     /// </summary>
     public virtual void DisableObject() {
+        TimerManager.instance.BoostTimer(destructible.intTimeBooster);
         CoinManager.instance.GainCoins(destructible.intCoinValue);
     }
 }

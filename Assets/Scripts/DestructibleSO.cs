@@ -10,5 +10,7 @@ public class DestructibleSO : ScriptableObject {
 
     public int intHealth;
     public int intCoinValue;
+    public int intTimeBooster;
+    public GameObject particleSystem;
 
 }

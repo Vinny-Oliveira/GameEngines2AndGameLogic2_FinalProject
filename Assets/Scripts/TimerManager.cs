@@ -14,6 +14,7 @@ public class TimerManager : SingletonManager<TimerManager> {
 
     [Header("UI References")]
     public TextMeshProUGUI tmpTimer;
+    public TextMeshProUGUI tmpTimeBooster;
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
 
@@ -54,5 +55,14 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     public void DisableTimer() {
         isTimerEnabled = false;
+    }
+
+    /// <summary>
+    /// Increase the timer
+    /// </summary>
+    /// <param name="timeBoost"></param>
+    public void BoostTimer(int timeBoost) {
+        intTimer += timeBoost;
+        tmpTimeBooster.text = "+" + timeBoost;
     }
 }
