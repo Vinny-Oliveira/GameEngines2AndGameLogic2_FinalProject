@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 6607353721666814545}
   - component: {fileID: 4317070876153833166}
   m_Layer: 5
-  m_Name: BackLevelSelect_btn
+  m_Name: BackToMainMenu_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3313,7 +3313,7 @@ GameObject:
   - component: {fileID: 1836856155294597002}
   - component: {fileID: 4999720842125168649}
   m_Layer: 5
-  m_Name: ExitGame_tmp
+  m_Name: Back_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4206,7 +4206,7 @@ GameObject:
   - component: {fileID: 5060393904103852973}
   - component: {fileID: 1022109887102850074}
   m_Layer: 5
-  m_Name: BackLevelSlc_tmp
+  m_Name: BackToMainMenu_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4257,7 +4257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back Level Select
+  m_text: Back to Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4328,8 +4328,8 @@ MonoBehaviour:
     textComponent: {fileID: 1022109887102850074}
     characterCount: 17
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
