@@ -4828,6 +4828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name_id: bed
+  particle: {fileID: 8456198718168812918}
 --- !u!1 &6263494221512152363
 GameObject:
   m_ObjectHideFlags: 0

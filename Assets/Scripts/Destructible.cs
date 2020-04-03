@@ -58,12 +58,19 @@ public abstract class Destructible : MonoBehaviour {
     /// </summary>
     public virtual void DisableObject() {
         // Play particle system
-        if (destructible.particleSystem != null) { 
-            foreach (ParticleSystem particle in ParticlePool.instance.particleSystems) { 
-                if (particle.name == destructible.particleSystem.name) {
-                    particle.transform.position = transform.position;
-                    particle.gameObject.SetActive(true);
-                    particle.Play();
+        if (destructible.particleSystem != null) {
+            string myParticle = destructible.particleSystem.GetComponent<ParticleDefinition>().name_id;
+            
+            foreach (ParticleDefinition particleDef in ParticlePool.instance.particleSystems) { 
+                if (particleDef.name_id == myParticle) { // Compare IDs
+
+                    if (particleDef.particle == null) {
+                        particleDef.AttachSelf();
+                    }
+
+                    particleDef.transform.position = transform.position;
+                    particleDef.gameObject.SetActive(true);
+                    particleDef.particle.Play();
                     break;
                 }
             }
