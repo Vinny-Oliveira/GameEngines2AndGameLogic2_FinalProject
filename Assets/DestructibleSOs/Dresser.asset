@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
-  m_Name: DresserType1
+  m_Name: Dresser
   m_EditorClassIdentifier: 
   intHealth: 3
   intCoinValue: 10
   intTimeBooster: 2
-  particleSystem: {fileID: 7345816053436077052, guid: 168bba57007accd4baa0050adf375dd3,
+  particleSystem: {fileID: 6705668496241826128, guid: 9428dc2751206864ca4c5f2848f456d0,
     type: 3}

@@ -57,6 +57,19 @@ public abstract class Destructible : MonoBehaviour {
     /// Award the player with an amount of coins defined in this destructible
     /// </summary>
     public virtual void DisableObject() {
+        // Play particle system
+        if (destructible.particleSystem != null) { 
+            foreach (ParticleSystem particle in ParticlePool.instance.particleSystems) { 
+                if (particle.name == destructible.particleSystem.name) {
+                    particle.transform.position = transform.position;
+                    particle.gameObject.SetActive(true);
+                    particle.Play();
+                    break;
+                }
+            }
+        }
+
+        // Update variables
         TimerManager.instance.BoostTimer(destructible.intTimeBooster);
         CoinManager.instance.GainCoins(destructible.intCoinValue);
     }

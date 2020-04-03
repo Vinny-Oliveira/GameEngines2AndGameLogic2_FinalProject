@@ -15,5 +15,5 @@ MonoBehaviour:
   intHealth: 5
   intCoinValue: 20
   intTimeBooster: 2
-  particleSystem: {fileID: 3704146245021767214, guid: 922e03c1a0ea3094d9ff630521f863c3,
+  particleSystem: {fileID: 564400901285921074, guid: 2b99de54b82434047b32ce42c26be904,
     type: 3}
