@@ -14,6 +14,8 @@ public abstract class Destructible : MonoBehaviour {
     int intHealth;
     bool canDestroy = false;
 
+    static List<ParticleSystem> listParticles = new List<ParticleSystem>();
+
     /// <summary>
     /// Reset health according to value of the destructable SO
     /// </summary>
@@ -58,26 +60,47 @@ public abstract class Destructible : MonoBehaviour {
     /// </summary>
     public virtual void DisableObject() {
         // Play particle system
-        if (destructible.particleSystem != null) {
-            string myParticle = destructible.particleSystem.GetComponent<ParticleDefinition>().name_id;
-            
-            foreach (ParticleDefinition particleDef in ParticlePool.instance.particleSystems) { 
-                if (particleDef.name_id == myParticle) { // Compare IDs
-
-                    if (particleDef.particle == null) {
-                        particleDef.AttachSelf();
-                    }
-
-                    particleDef.transform.position = transform.position;
-                    particleDef.gameObject.SetActive(true);
-                    particleDef.particle.Play();
-                    break;
-                }
-            }
-        }
+        ParticlePooling();
 
         // Update variables
         TimerManager.instance.BoostTimer(destructible.intTimeBooster);
         CoinManager.instance.GainCoins(destructible.intCoinValue);
+    }
+
+    /// <summary>
+    /// Play a particle system on where this object is
+    /// </summary>
+    /// <param name="particleSystem"></param>
+    void PlayParticle(ParticleSystem particleSystem) {
+        particleSystem.transform.position = transform.position;
+        particleSystem.gameObject.SetActive(true);
+        particleSystem.Play();
+    }
+
+    /// <summary>
+    /// Object pooling for particle systems
+    /// </summary>
+    void ParticlePooling() { 
+        // Check if there is a particle system in the destructibleSO
+        if (destructible.particleSystem != null) {
+            string myParticleName = destructible.particleSystem.GetComponent<ParticleDefinition>().name_id;
+            bool isParticleFound = false;
+
+            // Go through the particle list and compare IDs
+            foreach (ParticleSystem particle in listParticles) { 
+                if (particle.GetComponent<ParticleDefinition>().name_id == myParticleName) {
+                    isParticleFound = true;
+                    PlayParticle(particle);
+                    break;
+                }
+            }
+
+            // Instantiate a new particle and put it in the pooling list
+            if (!isParticleFound) {
+                ParticleSystem newParticle = Instantiate(destructible.particleSystem);
+                listParticles.Add(newParticle);
+                PlayParticle(newParticle);
+            }
+        }
     }
 }
