@@ -62,7 +62,9 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     /// <param name="timeBoost"></param>
     public void BoostTimer(int timeBoost) {
-        intTimer += timeBoost;
-        tmpTimeBooster.text = "+" + timeBoost;
+        if (timeBoost > 0) { 
+            intTimer += timeBoost;
+            tmpTimeBooster.text = "+" + timeBoost;
+        }
     }
 }
