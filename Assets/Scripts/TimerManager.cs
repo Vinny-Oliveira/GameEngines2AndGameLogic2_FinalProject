@@ -23,25 +23,19 @@ public class TimerManager : SingletonManager<TimerManager> {
     // Start is called before the first frame update
     void Start() {
         isTimerEnabled = true;
-        StartCoroutine(DisplayTimer());
+        StartCoroutine(RunTimer());
     }
 
     /// <summary>
-    /// Display the timer
+    /// Run the timer continuosly until it zeroes
     /// </summary>
     /// <returns></returns>
-    IEnumerator DisplayTimer() {
+    IEnumerator RunTimer() {
 
         while ((intTimer > -1) && (isTimerEnabled)) {
             yield return new WaitForSeconds(1);
 
-            int intMinutes = intTimer / 60;
-            int intSeconds = intTimer % 60;
-
-            string strMinutes = ((intMinutes < 10) ? ("0" + intMinutes) : (intMinutes.ToString()));
-            string strSeconds = ((intSeconds < 10) ? ("0" + intSeconds) : (intSeconds.ToString()));
-            tmpTimer.text = strMinutes + ":" + strSeconds;
-
+            DisplayTimer();
             intTimer--;
         }
 
@@ -66,5 +60,17 @@ public class TimerManager : SingletonManager<TimerManager> {
             intTimer += timeBoost;
             tmpTimeBooster.text = "+" + timeBoost;
         }
+    }
+
+    /// <summary>
+    /// Display the timer with the proper format
+    /// </summary>
+    void DisplayTimer() {
+        int intMinutes = intTimer / 60;
+        int intSeconds = intTimer % 60;
+
+        string strMinutes = ((intMinutes < 10) ? ("0" + intMinutes) : (intMinutes.ToString()));
+        string strSeconds = ((intSeconds < 10) ? ("0" + intSeconds) : (intSeconds.ToString()));
+        tmpTimer.text = strMinutes + ":" + strSeconds;
     }
 }
