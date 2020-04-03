@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4892809807579465799}
   - component: {fileID: 6705668496241826128}
   - component: {fileID: 1197852971015534935}
+  - component: {fileID: 8717415232298342078}
   m_Layer: 0
   m_Name: Particle_Dresser
   m_TagString: Untagged
@@ -4814,6 +4815,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8717415232298342078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301246742979187712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf00058ac4528044aff7c9e5ee972ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name_id: dresser
 --- !u!1 &6966003508865582729
 GameObject:
   m_ObjectHideFlags: 0

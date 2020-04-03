@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ParticlePool : SingletonManager<ParticlePool> {
 
-    public List<ParticleSystem> particleSystems = new List<ParticleSystem>();
+    public List<ParticleDefinition> particleSystems = new List<ParticleDefinition>();
 
 }

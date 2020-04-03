@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6610013422382848119}
   - component: {fileID: 8456198718168812918}
   - component: {fileID: 6142683041484113516}
+  - component: {fileID: 7756379077434357660}
   m_Layer: 0
   m_Name: Particle_Bed
   m_TagString: Untagged
@@ -4814,6 +4815,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7756379077434357660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061803352127506358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf00058ac4528044aff7c9e5ee972ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name_id: bed
 --- !u!1 &6263494221512152363
 GameObject:
   m_ObjectHideFlags: 0

@@ -4832,6 +4832,7 @@ GameObject:
   - component: {fileID: 7477932887512828749}
   - component: {fileID: 2954195546669752134}
   - component: {fileID: 1212788269833728745}
+  - component: {fileID: 474591455575593908}
   m_Layer: 0
   m_Name: Particle_Couch
   m_TagString: Untagged
@@ -9634,3 +9635,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &474591455575593908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812713737381682490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf00058ac4528044aff7c9e5ee972ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name_id: couch
