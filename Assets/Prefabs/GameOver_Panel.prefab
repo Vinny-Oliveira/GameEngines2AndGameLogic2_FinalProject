@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 3044891119551382951}
   - component: {fileID: 6179954914489365270}
   m_Layer: 5
-  m_Name: IAP_BTN_tmp
+  m_Name: Retry_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Retry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1732,8 +1732,9 @@ GameObject:
   - component: {fileID: 7932817295208566731}
   - component: {fileID: 4612226152522796893}
   - component: {fileID: 1303824983462743413}
+  - component: {fileID: 8284633154844349173}
   m_Layer: 5
-  m_Name: Continue_Level_Btn
+  m_Name: Retry_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1837,7 +1838,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4612226152522796893}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8284633154844349173}
+        m_MethodName: RetryLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8284633154844349173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012796810568180566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffbef6bc22d33e447962783078583811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnRetry: {fileID: 1303824983462743413}
+  pnl_GameOver: {fileID: 1132978799930000176}
 --- !u!1 &8508060614526423171
 GameObject:
   m_ObjectHideFlags: 0

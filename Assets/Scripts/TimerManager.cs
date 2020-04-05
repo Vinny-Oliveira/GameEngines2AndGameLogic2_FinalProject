@@ -10,7 +10,8 @@ using TMPro;
 public class TimerManager : SingletonManager<TimerManager> {
 
     [Header("Starting Time")]
-    public int intTimer;
+    [SerializeField]
+    int intTimer;
 
     [Header("UI References")]
     public TextMeshProUGUI tmpTimer;
@@ -22,6 +23,29 @@ public class TimerManager : SingletonManager<TimerManager> {
 
     // Start is called before the first frame update
     void Start() {
+        StartTimer();
+    }
+
+    /// <summary>
+    /// Getter for the timer value
+    /// </summary>
+    /// <returns></returns>
+    public int GetTimer() {
+        return intTimer;
+    }
+
+    /// <summary>
+    /// Setter for the timer value
+    /// </summary>
+    /// <param name="newTime"></param>
+    public void SetTimer(int newTime) {
+        intTimer = newTime;
+    }
+
+    /// <summary>
+    /// Enable the timer and run it
+    /// </summary>
+    public void StartTimer() {
         isTimerEnabled = true;
         StartCoroutine(RunTimer());
     }

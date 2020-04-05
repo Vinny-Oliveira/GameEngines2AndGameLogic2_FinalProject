@@ -12,8 +12,10 @@ public class HammerManager : SingletonManager<HammerManager> {
     Queue<Hammer> queHammers = new Queue<Hammer>();
 
     [Header("Hammer Management")]
-    public int intStartingHammers;
-    public int intHammerHealth;
+    [SerializeField]
+    int intStartingHammers;
+    [SerializeField]
+    int intHammerHealth;
     
     [Header("UI References")]
     public TextMeshProUGUI tmpHammerCount;
@@ -23,7 +25,6 @@ public class HammerManager : SingletonManager<HammerManager> {
     // Start is called before the first frame update
     void Start() {
         PopulateHammerQueue(intStartingHammers, intHammerHealth);
-        tmpHammerCount.text = queHammers.Count.ToString();
     }
 
     /// <summary>
@@ -34,6 +35,15 @@ public class HammerManager : SingletonManager<HammerManager> {
         for (int i = 0; i < amountHammers; i++) {
             queHammers.Enqueue(new Hammer(healthOfHammers));
         }
+        tmpHammerCount.text = queHammers.Count.ToString();
+    }
+
+    /// <summary>
+    /// Populate the queue of hammers with the starting number of hammers and default health
+    /// </summary>
+    /// <param name="amountHammers"></param>
+    public void PopulateHammerQueue(int amountHammers) {
+        PopulateHammerQueue(amountHammers, intHammerHealth);
     }
 
     /// <summary>
