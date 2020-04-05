@@ -17,8 +17,11 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public Button btnAdsForCoins;
     public string myPlacementId = "rewardedVideo";
     public int intRewardedCoins;
+    bool isAdWatched;
 
     void Start() {
+        isAdWatched = false;
+
         if (btnAdsForCoins == null) {
             btnAdsForCoins = GetComponent<Button>();
         }
@@ -41,7 +44,7 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsReady(string placementId)
     {
         // If the ready Placement is rewarded, activate the button: 
-        if (placementId == myPlacementId)
+        if (placementId == myPlacementId && !isAdWatched)
         {
             btnAdsForCoins.interactable = true;
         }
@@ -54,6 +57,7 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
         {
             // Reward the user for watching the ad to completion.
             CoinManager.instance.SaveCoinsToBank(intRewardedCoins);
+            isAdWatched = true;
             btnAdsForCoins.interactable = false; // Disable the ads for coins button
         }
         else if (showResult == ShowResult.Skipped)
