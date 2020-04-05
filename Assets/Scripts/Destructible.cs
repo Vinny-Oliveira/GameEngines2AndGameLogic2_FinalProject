@@ -28,11 +28,14 @@ public abstract class Destructible : MonoBehaviour {
     /// Decrease health of the destructable object
     /// </summary>
     public virtual void DecreaseHealth() {
-        intHealth--;
+        if (canDestroy) { 
+            intHealth--;
 
-        if (intHealth < 1) {
-            gameObject.SetActive(false);
-            DisableObject();
+            if (intHealth < 1) {
+                gameObject.SetActive(false);
+                DisableObject();
+            }
+            HammerManager.instance.HitAnObject();
         }
     }
 
@@ -49,10 +52,7 @@ public abstract class Destructible : MonoBehaviour {
             return;
         }
 #endif  
-        if (canDestroy) {
-            DecreaseHealth();
-            HammerManager.instance.HitAnObject();
-        }
+        DecreaseHealth();
     }
 
     /// <summary>

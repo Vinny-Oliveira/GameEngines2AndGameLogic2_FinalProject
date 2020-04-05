@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 9142820415948450339}
   - component: {fileID: 7623133366621622218}
   m_Layer: 0
-  m_Name: Particle_Default
+  m_Name: Particle_Destruction_Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9142820415948450340
 Transform:
   m_ObjectHideFlags: 0
@@ -4836,7 +4836,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name_id: default
-  particle: {fileID: 9142820415948450338}
 --- !u!1 &9142820416224951513
 GameObject:
   m_ObjectHideFlags: 0

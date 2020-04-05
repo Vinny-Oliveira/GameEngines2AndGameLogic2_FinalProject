@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intStartingHammers: 2
-  intHammerHealth: 1
+  intHammerHealth: 90
   tmpHammerCount: {fileID: 5060673162905644705}
   tmpReward: {fileID: 980391135}
   pnl_GameOver: {fileID: 5060673162905644703}
