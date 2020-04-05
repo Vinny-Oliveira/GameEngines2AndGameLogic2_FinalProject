@@ -2560,6 +2560,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551382043267822822}
     m_Modifications:
+    - target: {fileID: 1095312656851120239, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095312656851120239, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095312656851120239, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095312656851120239, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -324
+      objectReference: {fileID: 0}
     - target: {fileID: 1132978799930000176, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
       propertyPath: m_Name
@@ -2678,22 +2698,22 @@ PrefabInstance:
     - target: {fileID: 1386508775237121358, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1386508775237121358, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1386508775237121358, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1386508775237121358, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 217
+      value: -540
       objectReference: {fileID: 0}
     - target: {fileID: 1386508775237121358, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
@@ -2725,6 +2745,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165771251290042314, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_text
+      value: Buy more Hammers
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165771251290042314, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165771251290042314, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165771251290042314, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5231942442957968332, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2734,6 +2774,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: -153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534779583306943846, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534779583306943846, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534779583306943846, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534779583306943846, guid: 3b78525792d39924ab47395a1cc73f46,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -108
       objectReference: {fileID: 0}
     - target: {fileID: 7244444007537848447, guid: 3b78525792d39924ab47395a1cc73f46,
         type: 3}
