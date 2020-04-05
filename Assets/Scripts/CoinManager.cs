@@ -48,6 +48,14 @@ public class CoinManager : SingletonManager<CoinManager> {
     }
 
     /// <summary>
+    /// Get the number of coins in the bank
+    /// </summary>
+    /// <returns></returns>
+    public int GetBank() {
+        return intBankOfCoins;
+    }
+
+    /// <summary>
     /// Save the total number of coins gained in the level
     /// </summary>
     /// <returns></returns>

@@ -19,15 +19,12 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public int intRewardedCoins;
 
     void Start() {
-        //btnAdsForMoreCoins = GetComponent<Button>();
+        if (btnAdsForCoins == null) {
+            btnAdsForCoins = GetComponent<Button>();
+        }
 
         // Set interactivity to be dependent on the Placement’s status:
         btnAdsForCoins.interactable = Advertisement.IsReady(myPlacementId);
-
-        // Map the ShowRewardedVideo function to the button’s click listener:
-        //if (btnAdsForMoreCoins) { 
-        //    btnAdsForMoreCoins.onClick.AddListener(ShowRewardedVideo); 
-        //}
 
         // Initialize the Ads listener and service:
         Advertisement.AddListener(this);
@@ -57,6 +54,7 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
         {
             // Reward the user for watching the ad to completion.
             CoinManager.instance.SaveCoinsToBank(intRewardedCoins);
+            btnAdsForCoins.interactable = false; // Disable the ads for coins button
         }
         else if (showResult == ShowResult.Skipped)
         {
