@@ -14,7 +14,8 @@ public abstract class Destructible : MonoBehaviour {
     int intHealth;
     bool canDestroy = false;
 
-    static List<ParticleSystem> listParticles = new List<ParticleSystem>();
+    static List<ParticleSystem> destructionParticles = new List<ParticleSystem>();
+    static List<ParticleSystem> damageParticles = new List<ParticleSystem>();
 
     /// <summary>
     /// Reset health according to value of the destructable SO
@@ -30,6 +31,7 @@ public abstract class Destructible : MonoBehaviour {
     public virtual void DecreaseHealth() {
         if (canDestroy) { 
             intHealth--;
+            ParticlePooling(ref damageParticles, destructible.particleDamage);
 
             if (intHealth < 1) {
                 gameObject.SetActive(false);
@@ -60,7 +62,7 @@ public abstract class Destructible : MonoBehaviour {
     /// </summary>
     public virtual void DisableObject() {
         // Play particle system
-        ParticlePooling();
+        ParticlePooling(ref destructionParticles, destructible.particleDestruction);
 
         // Update variables
         TimerManager.instance.BoostTimer(destructible.intTimeBooster);
@@ -80,10 +82,10 @@ public abstract class Destructible : MonoBehaviour {
     /// <summary>
     /// Object pooling for particle systems
     /// </summary>
-    void ParticlePooling() { 
+    void ParticlePooling(ref List<ParticleSystem> listParticles, ParticleSystem particleType) { 
         // Check if there is a particle system in the destructibleSO
-        if (destructible.particleSystem != null) {
-            string myParticleName = destructible.particleSystem.GetComponent<ParticleDefinition>().name_id;
+        if (particleType != null) {
+            string myParticleName = particleType.GetComponent<ParticleDefinition>().name_id;
             bool isParticleFound = false;
 
             // Go through the particle list and compare IDs
@@ -97,7 +99,7 @@ public abstract class Destructible : MonoBehaviour {
 
             // Instantiate a new particle and put it in the pooling list
             if (!isParticleFound) {
-                ParticleSystem newParticle = Instantiate(destructible.particleSystem);
+                ParticleSystem newParticle = Instantiate(particleType);
                 listParticles.Add(newParticle);
                 PlayParticle(newParticle);
             }
