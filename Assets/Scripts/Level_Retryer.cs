@@ -21,6 +21,7 @@ public class Level_Retryer : MonoBehaviour {
 
         pnl_GameOver.SetActive(false);
         btnRetry.interactable = false;
+        WinLossManager.SetRetryState(true);
         TimerManager.instance.StartTimer();
     }
 

@@ -27,13 +27,14 @@ public class AnalyticsManager {
     /// </summary>
     /// <param name="eventName"></param>
     /// <param name="eventCount"></param>
-    public static void IncreaseAnalytics(string eventName, ref int eventCount) {
+    static void IncreaseAnalytics(string eventName, ref int eventCount) {
         eventCount++;
         Analytics.CustomEvent(eventName);
 
         Dictionary<string, object> analyticsData = new Dictionary<string, object>();
         analyticsData.Add(eventName, eventCount);
         Analytics.CustomEvent(eventName, analyticsData);
+        Debug.Log(eventName + ": " + eventCount + " times");
     }
 
     /// <summary>

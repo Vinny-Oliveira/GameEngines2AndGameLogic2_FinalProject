@@ -51,6 +51,12 @@ public class HammerManager : SingletonManager<HammerManager> {
     /// </summary>
     public void HitAnObject() {
         if (queHammers.Count < 1) {
+            if (WinLossManager.GetRetryState()) {
+                AnalyticsManager.Increase2ndGameOverAnalytics();
+            } else {
+                AnalyticsManager.Increase1stGameOverAnalytics();
+            }
+
             WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
             return;
         }

@@ -8,6 +8,24 @@ using TMPro;
 /// </summary>
 public class WinLossManager {
 
+    static bool isRetrying = false;
+
+    /// <summary>
+    /// Get the retry state
+    /// </summary>
+    /// <returns></returns>
+    public static bool GetRetryState() {
+        return isRetrying;
+    }
+
+    /// <summary>
+    /// Reset the retry state of the game
+    /// </summary>
+    /// <param name="retryState"></param>
+    public static void SetRetryState(bool retryState) {
+        isRetrying = retryState;
+    }
+
     /// <summary>
     /// Display the panel for win or loss condition, whichever one is passed
     /// </summary>

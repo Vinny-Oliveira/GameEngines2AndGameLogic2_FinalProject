@@ -39,6 +39,7 @@ public class BuildingManager : MonoBehaviour {
             }
         
         } else { // All floors destroyed = player wins
+            AnalyticsManager.IncreaseWinAnalytics();
             WinLossManager.DisplayWinLossPanel(pnl_Win, tmpReward);
         }
     }

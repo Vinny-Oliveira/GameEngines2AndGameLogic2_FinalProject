@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
 
 /// <summary>
 /// Manage the timer of the level
@@ -23,6 +24,7 @@ public class TimerManager : SingletonManager<TimerManager> {
 
     // Start is called before the first frame update
     void Start() {
+        WinLossManager.SetRetryState(false);
         StartTimer();
     }
 
@@ -63,7 +65,13 @@ public class TimerManager : SingletonManager<TimerManager> {
             intTimer--;
         }
 
-        if (intTimer < 1) { 
+        if (intTimer < 1) {
+            if (WinLossManager.GetRetryState()) {
+                AnalyticsManager.Increase2ndGameOverAnalytics();
+            } else {
+                AnalyticsManager.Increase1stGameOverAnalytics();
+            }
+
             WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
         }
     }
