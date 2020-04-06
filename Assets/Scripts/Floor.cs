@@ -5,7 +5,6 @@ using UnityEngine;
 /// <summary>
 /// Model all the floors of building
 /// </summary>
-[RequireComponent(typeof(AudioSource))]
 public class Floor : Destructible {
 
     List<Furniture> listFurnitures = new List<Furniture>();

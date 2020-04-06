@@ -14,7 +14,6 @@ public abstract class Destructible : MonoBehaviour {
 
     int intHealth;
     bool canDestroy = false;
-    AudioSource audioSource;
 
     static List<ParticleSystem> destructionParticles = new List<ParticleSystem>();
     static List<ParticleSystem> damageParticles = new List<ParticleSystem>();
@@ -56,11 +55,6 @@ public abstract class Destructible : MonoBehaviour {
             return;
         }
 #endif  
-        if (audioSource == null) {
-            audioSource = GetComponent<AudioSource>();
-            audioSource.clip = destructible.soundWhenHit;
-        }
-        //audioSource.Play();
         DecreaseHealth();
     }
 
@@ -84,6 +78,7 @@ public abstract class Destructible : MonoBehaviour {
         particleSystem.transform.position = transform.position;
         particleSystem.gameObject.SetActive(true);
         particleSystem.Play();
+        particleSystem.GetComponent<ParticleDefinition>().PlayHitSound();
     }
 
     /// <summary>

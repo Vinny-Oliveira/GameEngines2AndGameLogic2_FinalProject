@@ -5,7 +5,6 @@ using UnityEngine;
 /// <summary>
 /// Model all the furniture of the building
 /// </summary>
-[RequireComponent(typeof(AudioSource))]
 public class Furniture : Destructible {
 
     /// <summary>
