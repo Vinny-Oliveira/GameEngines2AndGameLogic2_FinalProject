@@ -55,10 +55,14 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
-            // Reward the user for watching the ad to completion.
-            CoinManager.instance.SaveCoinsToBank(intRewardedCoins);
-            isAdWatched = true;
-            btnAdsForCoins.interactable = false; // Disable the ads for coins button
+            try {
+                // Reward the user for watching the ad to completion.
+                CoinManager.instance.SaveCoinsToBank(intRewardedCoins);
+                isAdWatched = true;
+                btnAdsForCoins.interactable = false; // Disable the ads for coins button
+            } catch (System.InvalidOperationException ex) {
+                Debug.Log(ex.Message);
+            }
         }
         else if (showResult == ShowResult.Skipped)
         {

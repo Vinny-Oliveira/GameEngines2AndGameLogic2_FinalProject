@@ -60,8 +60,7 @@ public class CoinManager : SingletonManager<CoinManager> {
     /// </summary>
     /// <returns></returns>
     public void SaveCoinsToBank() {
-        intBankOfCoins += intCoinsInLevel;
-        SaveBankToFile();
+        SaveCoinsToBank(intCoinsInLevel);
     }
 
     /// <summary>

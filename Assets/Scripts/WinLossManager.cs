@@ -19,7 +19,11 @@ public class WinLossManager {
         winLossPanel.SetActive(true);
 
         // Save the current data
-        CoinManager.instance.SaveCoinsToBank();
+        try { 
+            CoinManager.instance.SaveCoinsToBank();
+        } catch (System.InvalidOperationException ex) {
+            Debug.Log(ex.Message);
+        }
     }
 
 }
