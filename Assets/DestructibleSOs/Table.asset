@@ -17,3 +17,4 @@ MonoBehaviour:
   intTimeBooster: 2
   particleDestruction: {fileID: 0}
   particleDamage: {fileID: 0}
+  soundWhenHit: {fileID: 8300000, guid: 7fd6f6875bfc1cf4aa2b01f189d67743, type: 3}

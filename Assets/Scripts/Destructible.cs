@@ -60,7 +60,7 @@ public abstract class Destructible : MonoBehaviour {
             audioSource = GetComponent<AudioSource>();
             audioSource.clip = destructible.soundWhenHit;
         }
-        audioSource.Play();
+        //audioSource.Play();
         DecreaseHealth();
     }
 

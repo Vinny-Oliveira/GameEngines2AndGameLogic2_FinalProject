@@ -19,3 +19,4 @@ MonoBehaviour:
     type: 3}
   particleDamage: {fileID: 9142820415948450338, guid: 6b5ef69a3cdecce40ba9f479de16c33c,
     type: 3}
+  soundWhenHit: {fileID: 8300000, guid: f361cbd28244d7d47b56853ba42a45a7, type: 3}
