@@ -14,6 +14,7 @@ public abstract class Destructible : MonoBehaviour {
 
     int intHealth;
     bool canDestroy = false;
+    AudioSource audioSource;
 
     static List<ParticleSystem> destructionParticles = new List<ParticleSystem>();
     static List<ParticleSystem> damageParticles = new List<ParticleSystem>();
@@ -43,7 +44,7 @@ public abstract class Destructible : MonoBehaviour {
     }
 
     /// <summary>
-    /// Event to detect mouse of touch down
+    /// Event to detect mouse or touch down
     /// </summary>
     private void OnMouseDown() {
 #if UNITY_EDITOR
@@ -55,6 +56,11 @@ public abstract class Destructible : MonoBehaviour {
             return;
         }
 #endif  
+        if (audioSource == null) {
+            audioSource = GetComponent<AudioSource>();
+            audioSource.clip = destructible.soundWhenHit;
+        }
+        audioSource.Play();
         DecreaseHealth();
     }
 
