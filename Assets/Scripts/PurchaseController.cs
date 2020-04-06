@@ -16,7 +16,9 @@ public class PurchaseController : MonoBehaviour {
     public Button stdButton;
     public GameObject gameOverPurchaseBtn;
     public GameObject gameOverContinueBtn;
+    public TextMeshProUGUI tmpProductCost;
     public TextMeshProUGUI tmpProductAmount;
+    public TextMeshProUGUI tmpAmountBought;
     public GameObject thxPurchasePanel;
     
     [Header("Cost and Product")]
@@ -45,7 +47,7 @@ public class PurchaseController : MonoBehaviour {
         }
 
         // Reset UI objects
-        tmpProductAmount.text = productAmount.ToString();
+        tmpAmountBought.text = productAmount.ToString();
         thxPurchasePanel.SetActive(true);
         gameOverPurchaseBtn.SetActive(false);
         gameOverContinueBtn.SetActive(true);
@@ -68,6 +70,8 @@ public class PurchaseController : MonoBehaviour {
     /// Check if the button should be interactable when it awakes
     /// </summary>
     private void OnEnable() {
+        tmpProductCost.text = cost.ToString();
+        tmpProductAmount.text = "x" + productAmount.ToString();
         TurnButtonOnOff();
     }
 }
