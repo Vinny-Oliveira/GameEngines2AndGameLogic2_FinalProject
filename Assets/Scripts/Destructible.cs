@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -86,23 +87,16 @@ public abstract class Destructible : MonoBehaviour {
         // Check if there is a particle system in the destructibleSO
         if (particleType != null) {
             string myParticleName = particleType.GetComponent<ParticleDefinition>().name_id;
-            bool isParticleFound = false;
-
+            
             // Go through the particle list and compare IDs
-            foreach (ParticleSystem particle in listParticles) { 
-                if (particle.GetComponent<ParticleDefinition>().name_id == myParticleName) {
-                    isParticleFound = true;
-                    PlayParticle(particle);
-                    break;
-                }
-            }
+            ParticleSystem particle = listParticles.Find(x => (x != null && x.GetComponent<ParticleDefinition>().name_id == myParticleName));
 
-            // Instantiate a new particle and put it in the pooling list
-            if (!isParticleFound) {
-                ParticleSystem newParticle = Instantiate(particleType);
-                listParticles.Add(newParticle);
-                PlayParticle(newParticle);
+            // Instantiate a new particle if none is found and then play the particle
+            if (particle == null) {
+                particle = Instantiate(particleType);
+                listParticles.Add(particle);
             }
+            PlayParticle(particle);
         }
     }
 }
