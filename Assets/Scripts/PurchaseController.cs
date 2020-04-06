@@ -19,6 +19,7 @@ public class PurchaseController : MonoBehaviour {
     public TextMeshProUGUI tmpProductCost;
     public TextMeshProUGUI tmpProductAmount;
     public TextMeshProUGUI tmpAmountBought;
+    public GameObject hammerOptiosPanel;
     public GameObject thxPurchasePanel;
     
     [Header("Cost and Product")]
@@ -35,23 +36,32 @@ public class PurchaseController : MonoBehaviour {
             iapButton = GetComponent<IAPButton>();
         }
 
-        // Trade coins for hammers
-        CoinManager.instance.SaveCoinsToBank(-cost);
-        HammerManager hammerManager = HammerManager.instance;
-        hammerManager.PopulateHammerQueue(productAmount);
+        // Try to trade coins for hammers
+        try {
+            CoinManager.instance.SaveCoinsToBank(-cost); // may throw
+            HammerManager hammerManager = HammerManager.instance;
+            hammerManager.PopulateHammerQueue(productAmount);
 
-        // Give the user some more time if they are running short
-        TimerManager timerManager = TimerManager.instance;
-        if (timerManager.GetTimer() < MIN_TIMER) {
-            timerManager.SetTimer(MIN_TIMER);
+            // Give the user some more time if they are running short
+            TimerManager timerManager = TimerManager.instance;
+            if (timerManager.GetTimer() < MIN_TIMER) {
+                timerManager.SetTimer(MIN_TIMER);
+            }
+
+            // Reset UI objects
+            tmpAmountBought.text = productAmount.ToString();
+            thxPurchasePanel.SetActive(true);
+        
+            PurchaseController[] purchaseControllers = hammerOptiosPanel.GetComponentsInChildren<PurchaseController>();
+            foreach (PurchaseController controller in purchaseControllers) {
+                controller.TurnButtonOnOff();
+            }
+
+            gameOverPurchaseBtn.SetActive(false);
+            gameOverContinueBtn.SetActive(true);
+        } catch (System.InvalidOperationException ex) {
+            Debug.Log(ex.Message);
         }
-
-        // Reset UI objects
-        tmpAmountBought.text = productAmount.ToString();
-        thxPurchasePanel.SetActive(true);
-        gameOverPurchaseBtn.SetActive(false);
-        gameOverContinueBtn.SetActive(true);
-        TurnButtonOnOff();
     }
 
     /// <summary>

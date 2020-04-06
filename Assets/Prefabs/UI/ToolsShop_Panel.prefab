@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.10coins2hammers
+  productId: com.wildspreadstudios.homewrecker.80coins16hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -175,6 +175,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 6042032107254742528}
   tmpProductAmount: {fileID: 2795665689444697215}
   tmpAmountBought: {fileID: 6564115456857077246}
+  hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 80
   productAmount: 16
@@ -384,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.10coins2hammers
+  productId: com.wildspreadstudios.homewrecker.40coins8hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -426,6 +427,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 3418863182061299139}
   tmpProductAmount: {fileID: 2199647380060981427}
   tmpAmountBought: {fileID: 6564115456857077246}
+  hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 40
   productAmount: 8
@@ -1825,6 +1827,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 90098728629561211}
   tmpProductAmount: {fileID: 4162077607233903624}
   tmpAmountBought: {fileID: 6564115456857077246}
+  hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 10
   productAmount: 2
@@ -2639,7 +2642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.10coins2hammers
+  productId: com.wildspreadstudios.homewrecker.20coins4hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -2681,6 +2684,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 2743749110418085965}
   tmpProductAmount: {fileID: 3651682649779229837}
   tmpAmountBought: {fileID: 6564115456857077246}
+  hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 20
   productAmount: 4
@@ -3474,6 +3478,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Message_IAP_tmp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4162077608111352523}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076748521621774705, guid: f2c46912bb8dca6428833b51363478ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5076748521632833141, guid: f2c46912bb8dca6428833b51363478ac,
         type: 3}

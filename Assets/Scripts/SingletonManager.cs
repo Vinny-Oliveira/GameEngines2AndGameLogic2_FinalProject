@@ -6,7 +6,7 @@ using UnityEngine;
 /// Base class for singletons
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class SingletonManager<T> : MonoBehaviour where T: SingletonManager<T> {
+public abstract class SingletonManager<T> : MonoBehaviour where T: SingletonManager<T> {
 
     public static T instance;
 

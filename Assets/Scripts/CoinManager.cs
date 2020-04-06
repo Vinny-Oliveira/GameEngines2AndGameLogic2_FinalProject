@@ -69,6 +69,10 @@ public class CoinManager : SingletonManager<CoinManager> {
     /// </summary>
     /// <returns></returns>
     public void SaveCoinsToBank(int coinsToSave) {
+        if (intBankOfCoins + coinsToSave < 0) {
+            throw new System.InvalidOperationException("No coins available for this purchase.");
+        }
+
         intBankOfCoins += coinsToSave;
         SaveBankToFile();
     }
