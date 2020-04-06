@@ -13,5 +13,6 @@ public class DestructibleSO : ScriptableObject {
     public int intTimeBooster;
     public ParticleSystem particleDestruction;
     public ParticleSystem particleDamage;
+    public AudioClip soundWhenHit;
 
 }
