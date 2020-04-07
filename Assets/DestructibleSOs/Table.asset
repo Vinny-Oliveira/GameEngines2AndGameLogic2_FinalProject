@@ -15,6 +15,8 @@ MonoBehaviour:
   intHealth: 6
   intCoinValue: 8
   intTimeBooster: 2
-  particleDestruction: {fileID: 0}
-  particleDamage: {fileID: 0}
+  particleDestruction: {fileID: 5751523905188474976, guid: 0827bf16d4d27af4a84ed054e6ed280b,
+    type: 3}
+  particleDamage: {fileID: 9142820415948450338, guid: 6b5ef69a3cdecce40ba9f479de16c33c,
+    type: 3}
   soundWhenHit: {fileID: 8300000, guid: 7fd6f6875bfc1cf4aa2b01f189d67743, type: 3}
