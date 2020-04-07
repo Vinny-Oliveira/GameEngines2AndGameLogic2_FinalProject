@@ -3797,7 +3797,7 @@ GameObject:
   - component: {fileID: 928041846}
   - component: {fileID: 928041845}
   m_Layer: 0
-  m_Name: Soundtrack_AudioSource
+  m_Name: MainMenuSong_AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3814,7 +3814,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4782883391959781345, guid: 361474f5f3e7acf44a9120d2b6fcc2e2,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: a25098e08efc0c04f892804317d1e863, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5002,7 +5002,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 24300002, guid: 361474f5f3e7acf44a9120d2b6fcc2e2, type: 2}
         m_MethodName: set_mute
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
