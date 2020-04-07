@@ -76,6 +76,7 @@ public abstract class Destructible : MonoBehaviour {
     /// <param name="particleSystem"></param>
     void PlayParticle(ParticleSystem particleSystem) {
         particleSystem.transform.position = transform.position;
+        particleSystem.transform.rotation = transform.rotation;
         particleSystem.gameObject.SetActive(true);
         particleSystem.Play();
         particleSystem.GetComponent<ParticleDefinition>().PlayHitSound();
