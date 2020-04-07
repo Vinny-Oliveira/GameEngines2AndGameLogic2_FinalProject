@@ -2629,6 +2629,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1615560832667648474, guid: 5d2c809a43d24a245b8ef6d295436744,
+        type: 3}
+      propertyPath: gameOverPurchaseBtn
+      value: 
+      objectReference: {fileID: 7285944958378817332}
+    - target: {fileID: 1615560832667648474, guid: 5d2c809a43d24a245b8ef6d295436744,
+        type: 3}
+      propertyPath: gameOverContinueBtn
+      value: 
+      objectReference: {fileID: 7536152971254696711}
     - target: {fileID: 2413370097593286968, guid: 5d2c809a43d24a245b8ef6d295436744,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2659,6 +2669,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2585392612833199754, guid: 5d2c809a43d24a245b8ef6d295436744,
+        type: 3}
+      propertyPath: gameOverPurchaseBtn
+      value: 
+      objectReference: {fileID: 7285944958378817332}
+    - target: {fileID: 2585392612833199754, guid: 5d2c809a43d24a245b8ef6d295436744,
+        type: 3}
+      propertyPath: gameOverContinueBtn
+      value: 
+      objectReference: {fileID: 7536152971254696711}
     - target: {fileID: 4017450401026843068, guid: 5d2c809a43d24a245b8ef6d295436744,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -2789,6 +2809,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -52
       objectReference: {fileID: 0}
+    - target: {fileID: 4411834002118380885, guid: 5d2c809a43d24a245b8ef6d295436744,
+        type: 3}
+      propertyPath: gameOverPurchaseBtn
+      value: 
+      objectReference: {fileID: 7285944958378817332}
+    - target: {fileID: 4411834002118380885, guid: 5d2c809a43d24a245b8ef6d295436744,
+        type: 3}
+      propertyPath: gameOverContinueBtn
+      value: 
+      objectReference: {fileID: 7536152971254696711}
     - target: {fileID: 5564060919190960300, guid: 5d2c809a43d24a245b8ef6d295436744,
         type: 3}
       propertyPath: gameOverPurchaseBtn
