@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
   m_Name: Chair
   m_EditorClassIdentifier: 
-  intHealth: 4
+  intHealth: 3
   intCoinValue: 3
-  intTimeBooster: 0
-  particleDestruction: {fileID: 6705668496241826128, guid: 9428dc2751206864ca4c5f2848f456d0,
+  intTimeBooster: 2
+  particleDestruction: {fileID: 8208620652909743792, guid: 57b8d5235fdc906468b0a5a75b630868,
     type: 3}
   particleDamage: {fileID: 9142820415948450338, guid: 6b5ef69a3cdecce40ba9f479de16c33c,
     type: 3}

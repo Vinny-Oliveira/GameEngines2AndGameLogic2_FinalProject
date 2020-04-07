@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
   m_Name: Table
   m_EditorClassIdentifier: 
-  intHealth: 8
+  intHealth: 6
   intCoinValue: 8
   intTimeBooster: 2
-  particleDestruction: {fileID: 4928058904379436294, guid: d61f6541b603fa6409ded9e28d18c737,
+  particleDestruction: {fileID: 5751523905188474976, guid: 0827bf16d4d27af4a84ed054e6ed280b,
     type: 3}
   particleDamage: {fileID: 9142820415948450338, guid: 6b5ef69a3cdecce40ba9f479de16c33c,
     type: 3}
