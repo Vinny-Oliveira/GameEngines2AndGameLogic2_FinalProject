@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.80coins16hammers
+  productId: com.wildspreadstudios.homewrecker.16Hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.40coins8hammers
+  productId: com.wildspreadstudios.homewrecker.8Hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.10coins2hammers
+  productId: com.wildspreadstudios.homewrecker.2Hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -2945,7 +2945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.wildspreadstudios.homewrecker.20coins4hammers
+  productId: com.wildspreadstudios.homewrecker.4Hammers
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
