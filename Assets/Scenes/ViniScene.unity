@@ -1276,8 +1276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3fb8335d7d9684c99acc581df88633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intStartingHammers: 2
-  intHammerHealth: 2
+  intStartingHammers: 4
+  intHammerHealth: 20
   tmpHammerCount: {fileID: 5060673162905644705}
   tmpReward: {fileID: 980391135}
   pnl_GameOver: {fileID: 5060673162905644703}
