@@ -176,6 +176,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 6042032107254742528}
   tmpProductAmount: {fileID: 2795665689444697215}
   tmpAmountBought: {fileID: 6564115456857077246}
+  tmpBankAmount: {fileID: 6827205323898217093}
   hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 80
@@ -502,6 +503,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 3418863182061299139}
   tmpProductAmount: {fileID: 2199647380060981427}
   tmpAmountBought: {fileID: 6564115456857077246}
+  tmpBankAmount: {fileID: 6827205323898217093}
   hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 40
@@ -2124,6 +2126,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 90098728629561211}
   tmpProductAmount: {fileID: 4162077607233903624}
   tmpAmountBought: {fileID: 6564115456857077246}
+  tmpBankAmount: {fileID: 6827205323898217093}
   hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 10
@@ -2984,6 +2987,7 @@ MonoBehaviour:
   tmpProductCost: {fileID: 2743749110418085965}
   tmpProductAmount: {fileID: 3651682649779229837}
   tmpAmountBought: {fileID: 6564115456857077246}
+  tmpBankAmount: {fileID: 6827205323898217093}
   hammerOptiosPanel: {fileID: 4162077608111352523}
   thxPurchasePanel: {fileID: 6564115456253120802}
   cost: 20

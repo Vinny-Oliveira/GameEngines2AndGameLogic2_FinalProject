@@ -19,6 +19,7 @@ public class PurchaseController : MonoBehaviour {
     public TextMeshProUGUI tmpProductCost;
     public TextMeshProUGUI tmpProductAmount;
     public TextMeshProUGUI tmpAmountBought;
+    public TextMeshProUGUI tmpBankAmount;
     public GameObject hammerOptiosPanel;
     public GameObject thxPurchasePanel;
     
@@ -39,6 +40,7 @@ public class PurchaseController : MonoBehaviour {
         // Try to trade coins for hammers
         try {
             CoinManager.instance.SaveCoinsToBank(-cost); // may throw
+            tmpBankAmount.text = CoinManager.instance.GetBank().ToString();
             HammerManager hammerManager = HammerManager.instance;
             hammerManager.PopulateHammerQueue(productAmount);
 
@@ -81,6 +83,7 @@ public class PurchaseController : MonoBehaviour {
     /// </summary>
     private void OnEnable() {
         tmpProductCost.text = cost.ToString();
+        tmpBankAmount.text = CoinManager.instance.GetBank().ToString();
         tmpProductAmount.text = "x" + productAmount.ToString();
         TurnButtonOnOff();
     }
