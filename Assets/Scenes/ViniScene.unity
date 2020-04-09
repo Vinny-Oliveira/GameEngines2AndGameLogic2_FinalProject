@@ -2901,6 +2901,11 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 551382044330121103, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 551382044514313214, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_fontSize
