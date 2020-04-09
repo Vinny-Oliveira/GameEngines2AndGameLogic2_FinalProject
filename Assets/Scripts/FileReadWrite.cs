@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Linq;
 
 /// <summary>
 /// All data that is saved by the user
 /// </summary>
-public struct SavedData {
+public class SavedData {
     public int totalCoins;
+    public List<Hammer> hammers = new List<Hammer>();
 }
 
 /// <summary>
@@ -34,8 +36,9 @@ public class FileReadWrite {
     /// Set new values for the saved data
     /// </summary>
     /// <param name="newCoins"></param>
-    public static void SetSavedData(int newCoins) { 
-        savedData.totalCoins = newCoins; 
+    public static void SetSavedData(int newCoins, Queue<Hammer> newHammers) { 
+        savedData.totalCoins = newCoins;
+        savedData.hammers = newHammers.ToList();
     }
 
     /// <summary>

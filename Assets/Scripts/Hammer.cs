@@ -5,9 +5,10 @@ using UnityEngine;
 /// <summary>
 /// Model Hammer objects that are used to destroy the building of the game
 /// </summary>
+[System.Serializable]
 public class Hammer {
 
-    int intHealth;
+    public int intHealth;
 
     static int defaultMaxHealth = 5;
 

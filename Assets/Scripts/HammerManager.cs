@@ -12,8 +12,8 @@ public class HammerManager : SingletonManager<HammerManager> {
     Queue<Hammer> queHammers = new Queue<Hammer>();
 
     [Header("Hammer Management")]
-    [SerializeField]
-    int intStartingHammers;
+    //[SerializeField]
+    //int intStartingHammers;
     [SerializeField]
     int intHammerHealth;
     
@@ -22,9 +22,20 @@ public class HammerManager : SingletonManager<HammerManager> {
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_GameOver;
 
-    // Start is called before the first frame update
-    void Start() {
-        PopulateHammerQueue(intStartingHammers, intHammerHealth);
+    /// <summary>
+    /// Getter for the queue of hammers
+    /// </summary>
+    /// <returns></returns>
+    public Queue<Hammer> GetHammers() {
+        return queHammers;
+    }
+
+    /// <summary>
+    /// Set the queue of hammers from a list of hammers
+    /// </summary>
+    /// <param name="hammers"></param>
+    public void SetHammers(List<Hammer> hammers) {
+        queHammers = new Queue<Hammer>(hammers);
     }
 
     /// <summary>
