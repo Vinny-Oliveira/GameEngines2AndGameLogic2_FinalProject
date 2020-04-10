@@ -27,7 +27,7 @@ public class GamePurchaser : MonoBehaviour {
     /// <summary>
     /// Update the display of coins in the bank
     /// </summary>
-    void UpdateBankText() {
+    public void UpdateBankText() {
         tmpCoinsBank.text = CoinManager.instance.GetBank().ToString();
     }
 
@@ -46,7 +46,8 @@ public class GamePurchaser : MonoBehaviour {
     public void ConfirmPurchase() {
         // Try to trade coins for hammers
         try {
-            CoinManager.instance.SaveCoinsToBank(-intPriceTotal); // may throw
+            CoinManager coinManager = CoinManager.instance;
+            coinManager.SaveCoinsToBank(-intPriceTotal); // may throw
 
             // Add the purchased items and reset purchase values
             GameProduct[] gameProducts = contentView.GetComponentsInChildren<GameProduct>();
@@ -71,6 +72,8 @@ public class GamePurchaser : MonoBehaviour {
                 gameProduct.btnMinus.interactable = false;
                 gameProduct.btnPlus.interactable = true;
                 UpdateBankText();
+                tmpPriceTotal.text = "Total: 0";
+                coinManager.SaveCoinsToBank();
             }
 
             pnl_ThxPurchase.SetActive(true);

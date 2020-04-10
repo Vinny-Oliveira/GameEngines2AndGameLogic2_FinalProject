@@ -36,6 +36,7 @@ public class HammerManager : SingletonManager<HammerManager> {
     /// <param name="hammers"></param>
     public void SetHammers(List<Hammer> hammers) {
         queHammers = new Queue<Hammer>(hammers);
+        tmpHammerCount.text = queHammers.Count.ToString();
     }
 
     /// <summary>

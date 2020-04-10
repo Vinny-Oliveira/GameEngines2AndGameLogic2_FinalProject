@@ -356,7 +356,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 167721230619248396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3994917277810290375}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6007507537570187440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1062,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8940816982054049940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6511025511156991304}
+        m_MethodName: ConfirmPurchase
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8940816982136877308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,6 +1951,7 @@ MonoBehaviour:
   btnAdsForCoins: {fileID: 8940816982691646399}
   myPlacementId: rewardedVideo
   intRewardedCoins: 10
+  gamePurchaser: {fileID: 6511025511156991304}
 --- !u!1 &8940816982806800865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,6 +2376,11 @@ PrefabInstance:
       propertyPath: gamePurchaser
       value: 
       objectReference: {fileID: 6511025511156991304}
+    - target: {fileID: 3570490694014215743, guid: 4d906dd5c3c595a4894aa5f06d26659b,
+        type: 3}
+      propertyPath: product
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d906dd5c3c595a4894aa5f06d26659b, type: 3}
 --- !u!224 &8940816982082241577 stripped
