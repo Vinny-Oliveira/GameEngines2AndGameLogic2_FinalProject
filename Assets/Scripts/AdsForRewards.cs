@@ -17,7 +17,6 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public Button btnAdsForCoins;
     public string myPlacementId = "rewardedVideo";
     public int intRewardedCoins;
-    public GamePurchaser gamePurchaser;
     bool isAdWatched;
 
     void Start() {
@@ -54,14 +53,13 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
         // Define conditional logic for each ad completion status:
-        if (showResult == ShowResult.Finished)
+        if (showResult == ShowResult.Finished && !isAdWatched)
         {
             try {
                 // Reward the user for watching the ad to completion.
                 CoinManager.instance.SaveCoinsToBank(intRewardedCoins);
                 isAdWatched = true;
                 btnAdsForCoins.interactable = false; // Disable the ads for coins button
-                gamePurchaser.UpdateBankText();
             } catch (System.InvalidOperationException ex) {
                 Debug.Log(ex.Message);
             }
