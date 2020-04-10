@@ -5,9 +5,17 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+[System.Serializable]
+public enum Product { 
+    HAMMER = 1,
+    TEN_SEC = 10,
+    TWENTY_SEC = 20
+}
+
 public class InGameProductDisplayer : MonoBehaviour {
 
     [Header("Product Details")]
+    public Product product;
     public int intPrice;
     public TextMeshProUGUI tmpPrice;
 
@@ -19,11 +27,27 @@ public class InGameProductDisplayer : MonoBehaviour {
     public Button btnPlus;
 
     /// <summary>
+    /// Get the amount of that particular product
+    /// </summary>
+    /// <returns></returns>
+    public int GetAmount() {
+        return intProductAmount;
+    }
+
+    /// <summary>
+    /// Get the amount of that particular product
+    /// </summary>
+    /// <returns></returns>
+    public void SetAmount(int newAmount) {
+        intProductAmount = newAmount;
+    }
+
+    /// <summary>
     /// Update the value fields when the panel is enabled
     /// </summary>
     private void OnEnable() {
         tmpPrice.text = intPrice.ToString();
-        tmpProductAmount.text = "0";
+        //tmpProductAmount.text = "0";
         btnMinus.interactable = false;
     }
 

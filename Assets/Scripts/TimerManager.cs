@@ -66,6 +66,7 @@ public class TimerManager : SingletonManager<TimerManager> {
         }
 
         if (intTimer < 1) {
+            intTimer = 0;
             if (WinLossManager.GetRetryState()) {
                 AnalyticsManager.Increase2ndGameOverAnalytics();
             } else {
