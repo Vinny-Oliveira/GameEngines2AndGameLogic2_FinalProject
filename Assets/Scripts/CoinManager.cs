@@ -37,7 +37,7 @@ public class CoinManager : SingletonManager<CoinManager> {
     /// </summary>
     /// <param name="tmpCoinNumber"></param>
     public void GetCoinNumber(TextMeshProUGUI tmpCoinNumber) {
-        tmpCoinNumber.text = "You earned: " + intCoinsInLevel + " coins";
+        tmpCoinNumber.text = intCoinsInLevel.ToString();
     }
 
     /// <summary>

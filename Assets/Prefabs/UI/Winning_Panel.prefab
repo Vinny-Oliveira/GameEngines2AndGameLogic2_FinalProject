@@ -401,7 +401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3849598728648254350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 5430282112042593565}
   - component: {fileID: 4099155915255094627}
   m_Layer: 5
-  m_Name: Reward2_tmp
+  m_Name: RewardValue_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 1778213445236253057}
   - component: {fileID: 8754432522895607}
   m_Layer: 5
-  m_Name: Reward_tmp
+  m_Name: RewardMsg_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
