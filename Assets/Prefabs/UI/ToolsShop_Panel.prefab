@@ -1951,7 +1951,7 @@ MonoBehaviour:
   btnAdsForCoins: {fileID: 8940816982691646399}
   myPlacementId: rewardedVideo
   intRewardedCoins: 10
-  gamePurchaser: {fileID: 6511025511156991304}
+  myGamePurchaser: {fileID: 6511025511156991304}
 --- !u!1 &8940816982806800865
 GameObject:
   m_ObjectHideFlags: 0

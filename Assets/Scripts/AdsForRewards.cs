@@ -17,6 +17,7 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public Button btnAdsForCoins;
     public string myPlacementId = "rewardedVideo";
     public int intRewardedCoins;
+    public GamePurchaser myGamePurchaser;
     bool isAdWatched;
 
     void Start() {
@@ -60,6 +61,7 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
                 CoinManager.instance.SaveCoinsToBank(intRewardedCoins);
                 isAdWatched = true;
                 btnAdsForCoins.interactable = false; // Disable the ads for coins button
+                myGamePurchaser.UpdateBankText();
             } catch (System.InvalidOperationException ex) {
                 Debug.Log(ex.Message);
             }
