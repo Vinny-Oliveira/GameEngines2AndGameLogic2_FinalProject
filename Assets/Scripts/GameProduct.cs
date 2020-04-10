@@ -12,7 +12,7 @@ public enum Product {
     TWENTY_SEC = 20
 }
 
-public class InGameProductDisplayer : MonoBehaviour {
+public class GameProduct : MonoBehaviour {
 
     [Header("Product Details")]
     public Product product;
@@ -25,6 +25,7 @@ public class InGameProductDisplayer : MonoBehaviour {
     int intProductAmount;
     public Button btnMinus;
     public Button btnPlus;
+    public GamePurchaser gamePurchaser;
 
     /// <summary>
     /// Get the amount of that particular product
@@ -59,6 +60,7 @@ public class InGameProductDisplayer : MonoBehaviour {
             if (intProductAmount < MAX_AMOUNT) { 
                 intProductAmount++;
                 tmpProductAmount.text = intProductAmount.ToString();
+                gamePurchaser.ChangePriceTotal(intPrice);
                 btnMinus.interactable = true;
             }
 
@@ -78,6 +80,7 @@ public class InGameProductDisplayer : MonoBehaviour {
         if (Int32.TryParse(tmpProductAmount.text, out intProductAmount) && (intProductAmount > 0)) {
             intProductAmount--;
             tmpProductAmount.text = intProductAmount.ToString();
+            gamePurchaser.ChangePriceTotal(-intPrice);
             btnPlus.interactable = true;
 
             if (intProductAmount < 1) {

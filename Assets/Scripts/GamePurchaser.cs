@@ -5,23 +5,40 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
-public class InGamePurchaser : MonoBehaviour {
-
+public class GamePurchaser : MonoBehaviour {
 
     public Button btnConfirmPurchase;
+    public TextMeshProUGUI tmpCoinsBank;
     public TextMeshProUGUI tmpPriceTotal;
     public GameObject pnl_ThxPurchase;
     public GameObject pnl_NotEnoughCoins;
     public GameObject contentView;
     
     [HideInInspector]
-    public int intPriceTotal;
-    
-    //[Header("Cost and Product")]
-    //public int cost;
-    //public int productAmount;
+    int intPriceTotal;
 
-    //const int MIN_TIMER = 10;
+    /// <summary>
+    /// Update the displayed values when the panel is enabled
+    /// </summary>
+    private void OnEnable(){
+        UpdateBankText();
+    }
+
+    /// <summary>
+    /// Update the display of coins in the bank
+    /// </summary>
+    void UpdateBankText() {
+        tmpCoinsBank.text = CoinManager.instance.GetBank().ToString();
+    }
+
+    /// <summary>
+    /// Change the total price by adding an extra value
+    /// </summary>
+    /// <param name="addedValue"></param>
+    public void ChangePriceTotal(int addedValue) {
+        intPriceTotal += addedValue;
+        tmpPriceTotal.text = "Total: " + intPriceTotal;
+    }
 
     /// <summary>
     /// Spend coins and gain hammers if the purchase was successful
@@ -32,8 +49,8 @@ public class InGamePurchaser : MonoBehaviour {
             CoinManager.instance.SaveCoinsToBank(-intPriceTotal); // may throw
 
             // Add the purchased items and reset purchase values
-            InGameProductDisplayer[] inGameProducts = contentView.GetComponentsInChildren<InGameProductDisplayer>();
-            foreach (var gameProduct in inGameProducts) {
+            GameProduct[] gameProducts = contentView.GetComponentsInChildren<GameProduct>();
+            foreach (var gameProduct in gameProducts) {
                 switch (gameProduct.product)
                 {
                     case Product.HAMMER:
@@ -53,6 +70,7 @@ public class InGamePurchaser : MonoBehaviour {
                 gameProduct.SetAmount(0);
                 gameProduct.btnMinus.interactable = false;
                 gameProduct.btnPlus.interactable = true;
+                UpdateBankText();
             }
 
             pnl_ThxPurchase.SetActive(true);
@@ -67,7 +85,7 @@ public class InGamePurchaser : MonoBehaviour {
     /// </summary>
     /// <param name="product"></param>
     /// <param name="gameProduct"></param>
-    void IncreaseTimer(Product product, InGameProductDisplayer gameProduct) {
+    void IncreaseTimer(Product product, GameProduct gameProduct) {
         TimerManager timerManager = TimerManager.instance;
         timerManager.SetTimer(timerManager.GetTimer() + (int)product * gameProduct.GetAmount());
     }
