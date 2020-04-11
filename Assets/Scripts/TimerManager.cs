@@ -93,8 +93,7 @@ public class TimerManager : SingletonManager<TimerManager> {
         if (timeBoost > 0) { 
             intTimer += timeBoost;
             tmpTimeBooster.text = "+" + timeBoost;
-            tmpTimeBooster.gameObject.SetActive(true);
-            
+            animatorTime.SetTrigger(animatorTime.parameters[0].name);
         }
     }
 

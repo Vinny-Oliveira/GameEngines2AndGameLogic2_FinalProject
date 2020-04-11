@@ -2819,18 +2819,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d739eeef7313ab4199486518a7d6b9c, type: 3}
---- !u!114 &1219880557 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 551382044102528330, guid: 3154525c82d34b84aaf0fb365c478328,
-    type: 3}
-  m_PrefabInstance: {fileID: 5060673162905644702}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1246912845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3940,7 +3928,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intTimer: 10
   tmpTimer: {fileID: 58799875}
-  tmpTimeBooster: {fileID: 1219880557}
+  tmpTimeBooster: {fileID: 5060673162905644710}
+  animatorTime: {fileID: 5060673162905644709}
   tmpReward: {fileID: 5060673162905644707}
   pnl_TimesUp: {fileID: 5060673162905644703}
 --- !u!4 &1751187089
@@ -5002,6 +4991,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5060673162905644702}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &5060673162905644709 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 931371505849604951, guid: 3154525c82d34b84aaf0fb365c478328,
+    type: 3}
+  m_PrefabInstance: {fileID: 5060673162905644702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5060673162905644710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8698818248961882106, guid: 3154525c82d34b84aaf0fb365c478328,
+    type: 3}
+  m_PrefabInstance: {fileID: 5060673162905644702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5459769966378117587
 PrefabInstance:
   m_ObjectHideFlags: 0
