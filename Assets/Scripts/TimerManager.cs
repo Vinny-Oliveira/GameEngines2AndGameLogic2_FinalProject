@@ -17,6 +17,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     [Header("UI References")]
     public TextMeshProUGUI tmpTimer;
     public TextMeshProUGUI tmpTimeBooster;
+    public Animator animatorTime;
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_TimesUp;
 
@@ -92,6 +93,8 @@ public class TimerManager : SingletonManager<TimerManager> {
         if (timeBoost > 0) { 
             intTimer += timeBoost;
             tmpTimeBooster.text = "+" + timeBoost;
+            tmpTimeBooster.gameObject.SetActive(true);
+            
         }
     }
 
