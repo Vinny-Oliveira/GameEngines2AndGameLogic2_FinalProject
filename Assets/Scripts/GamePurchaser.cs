@@ -7,15 +7,28 @@ using System;
 
 public class GamePurchaser : MonoBehaviour {
 
+    [Header("References for this panel")]
     public Button btnConfirmPurchase;
     public TextMeshProUGUI tmpCoinsBank;
     public TextMeshProUGUI tmpPriceTotal;
     public GameObject pnl_ThxPurchase;
     public GameObject pnl_NotEnoughCoins;
     public GameObject contentView;
-    
+
+    [Header("References for the confirmation panel")]
+    public TextMeshProUGUI tmpPriceConfirmation;
+    public TextMeshProUGUI tmpBankConfirmation;
+
     [HideInInspector]
     int intPriceTotal;
+
+    /// <summary>
+    /// Check if the total current price is greater than zero
+    /// </summary>
+    /// <returns></returns>
+    public void TurnConfirmationBtnOnOff() {
+         btnConfirmPurchase.interactable = (intPriceTotal > 0);
+    }
 
     /// <summary>
     /// Update the displayed values when the panel is enabled
@@ -29,6 +42,7 @@ public class GamePurchaser : MonoBehaviour {
     /// </summary>
     public void UpdateBankText() {
         tmpCoinsBank.text = CoinManager.instance.GetBank().ToString();
+        tmpBankConfirmation.text = tmpCoinsBank.text;
     }
 
     /// <summary>
@@ -38,6 +52,7 @@ public class GamePurchaser : MonoBehaviour {
     public void ChangePriceTotal(int addedValue) {
         intPriceTotal += addedValue;
         tmpPriceTotal.text = "Total: " + intPriceTotal;
+        tmpPriceConfirmation.text = intPriceTotal.ToString();
     }
 
     /// <summary>
@@ -67,13 +82,7 @@ public class GamePurchaser : MonoBehaviour {
                         break;
                 }
 
-                gameProduct.tmpProductAmount.text = "0";
-                gameProduct.SetAmount(0);
-                gameProduct.btnMinus.interactable = false;
-                gameProduct.btnPlus.interactable = true;
-                UpdateBankText();
-                tmpPriceTotal.text = "Total: 0";
-                coinManager.SaveCoinsToBank();
+                ResetValues(gameProduct, coinManager);
             }
 
             pnl_ThxPurchase.SetActive(true);
@@ -81,6 +90,23 @@ public class GamePurchaser : MonoBehaviour {
             pnl_NotEnoughCoins.SetActive(true);
             Debug.Log(ex.Message);
         }
+    }
+
+    /// <summary>
+    /// Reset all panel values
+    /// </summary>
+    /// <param name="gameProduct"></param>
+    /// <param name="coinManager"></param>
+    void ResetValues(GameProduct gameProduct, CoinManager coinManager) {
+        gameProduct.tmpProductAmount.text = "0";
+        gameProduct.SetAmount(0);
+        gameProduct.btnMinus.interactable = false;
+        gameProduct.btnPlus.interactable = true;
+        TurnConfirmationBtnOnOff();
+        UpdateBankText();
+        tmpPriceTotal.text = "Total: 0";
+        tmpPriceConfirmation.text = intPriceTotal.ToString();
+        coinManager.SaveCoinsToBank();
     }
 
     /// <summary>

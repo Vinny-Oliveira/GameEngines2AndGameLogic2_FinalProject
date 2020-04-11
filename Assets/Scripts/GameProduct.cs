@@ -62,6 +62,7 @@ public class GameProduct : MonoBehaviour {
                 tmpProductAmount.text = intProductAmount.ToString();
                 gamePurchaser.ChangePriceTotal(intPrice);
                 btnMinus.interactable = true;
+                gamePurchaser.TurnConfirmationBtnOnOff();
             }
 
             if (intProductAmount > MAX_AMOUNT - 1) {
@@ -82,6 +83,7 @@ public class GameProduct : MonoBehaviour {
             tmpProductAmount.text = intProductAmount.ToString();
             gamePurchaser.ChangePriceTotal(-intPrice);
             btnPlus.interactable = true;
+            gamePurchaser.TurnConfirmationBtnOnOff();
 
             if (intProductAmount < 1) {
                 btnMinus.interactable = false;
