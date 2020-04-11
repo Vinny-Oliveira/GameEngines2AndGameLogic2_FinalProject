@@ -7,13 +7,13 @@ using UnityEngine;
 /// </summary>
 public class AnimationEvents : MonoBehaviour {
 
-    public GameObject panel;
+    public GameObject panelToActivate;
 
     /// <summary>
     /// Activate a panel
     /// </summary>
     public void ActivatePanel() {
-        panel.SetActive(true);
+        panelToActivate.SetActive(true);
     }
 
 }
