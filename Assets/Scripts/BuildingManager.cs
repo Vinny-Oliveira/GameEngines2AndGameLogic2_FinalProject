@@ -10,7 +10,7 @@ using TMPro;
 public class BuildingManager : MonoBehaviour {
 
     public Stack<Floor> stkFloors;
-    public GameObject pnl_Win;
+    public GameObject pnl_Congrats;
     public TextMeshProUGUI tmpReward;
 
     // Start is called before the first frame update
@@ -40,7 +40,7 @@ public class BuildingManager : MonoBehaviour {
         
         } else { // All floors destroyed = player wins
             AnalyticsManager.IncreaseWinAnalytics();
-            WinLossManager.DisplayWinLossPanel(pnl_Win, tmpReward);
+            WinLossManager.DisplayWinLossPanel(pnl_Congrats, tmpReward);
         }
     }
 }

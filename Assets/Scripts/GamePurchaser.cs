@@ -107,8 +107,8 @@ public class GamePurchaser : MonoBehaviour {
         gameProduct.btnPlus.interactable = true;
         TurnConfirmationBtnOnOff();
         UpdateBankText();
+        intPriceTotal = 0;
         tmpPriceTotal.text = "Total: 0";
-        tmpPriceConfirmation.text = intPriceTotal.ToString();
         coinManager.SaveCoinsToBank();
     }
 

@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   product: 0
-  intPrice: 666
+  intPrice: 100
   tmpPrice: {fileID: 3475593694887315670}
   tmpProductAmount: {fileID: 3475593696584780322}
   btnMinus: {fileID: 3475593696715064501}

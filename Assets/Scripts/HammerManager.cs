@@ -20,7 +20,7 @@ public class HammerManager : SingletonManager<HammerManager> {
     [Header("UI References")]
     public TextMeshProUGUI tmpHammerCount;
     public TextMeshProUGUI tmpReward;
-    public GameObject pnl_GameOver;
+    public GameObject pnl_NoHammers;
 
     /// <summary>
     /// Getter for the queue of hammers
@@ -69,7 +69,7 @@ public class HammerManager : SingletonManager<HammerManager> {
                 AnalyticsManager.Increase1stGameOverAnalytics();
             }
 
-            WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
+            WinLossManager.DisplayWinLossPanel(pnl_NoHammers, tmpReward);
             return;
         }
         
