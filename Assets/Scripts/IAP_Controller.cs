@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Control the In-App Purchases of the game
+/// </summary>
 public class IAP_Controller : MonoBehaviour {
 
     [Header("UI References")]
