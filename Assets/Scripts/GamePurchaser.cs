@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+/// <summary>
+/// Control how in-game products are purchased with in-game currency
+/// </summary>
 public class GamePurchaser : MonoBehaviour {
 
     [Header("References for this panel")]

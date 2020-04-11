@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+/// <summary>
+/// In-Game products
+/// </summary>
 [System.Serializable]
 public enum Product { 
     HAMMER = 1,
@@ -12,6 +15,9 @@ public enum Product {
     TWENTY_SEC = 20
 }
 
+/// <summary>
+/// Control how in-game products are displayed
+/// </summary>
 public class GameProduct : MonoBehaviour {
 
     [Header("Product Details")]

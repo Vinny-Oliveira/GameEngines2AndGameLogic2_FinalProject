@@ -30,6 +30,7 @@ public class WinLossManager {
     /// Display the panel for win or loss condition, whichever one is passed
     /// </summary>
     /// <param name="winLossPanel"></param>
+    /// <param name="tmpReward"></param>
     public static void DisplayWinLossPanel(GameObject winLossPanel, TextMeshProUGUI tmpReward) {
         // Display proper UI information
         TimerManager.instance.DisableTimer();
