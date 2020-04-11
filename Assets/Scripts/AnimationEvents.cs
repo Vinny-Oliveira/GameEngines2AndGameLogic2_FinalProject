@@ -14,6 +14,7 @@ public class AnimationEvents : MonoBehaviour {
     /// </summary>
     public void ActivatePanel() {
         panelToActivate.SetActive(true);
+        gameObject.SetActive(false);
     }
 
 }

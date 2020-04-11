@@ -18,7 +18,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     public TextMeshProUGUI tmpTimer;
     public TextMeshProUGUI tmpTimeBooster;
     public TextMeshProUGUI tmpReward;
-    public GameObject pnl_GameOver;
+    public GameObject pnl_TimesUp;
 
     bool isTimerEnabled;
 
@@ -73,7 +73,7 @@ public class TimerManager : SingletonManager<TimerManager> {
                 AnalyticsManager.Increase1stGameOverAnalytics();
             }
 
-            WinLossManager.DisplayWinLossPanel(pnl_GameOver, tmpReward);
+            WinLossManager.DisplayWinLossPanel(pnl_TimesUp, tmpReward);
         }
     }
 
