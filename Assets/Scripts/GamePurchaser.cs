@@ -54,7 +54,7 @@ public class GamePurchaser : MonoBehaviour {
     /// <param name="addedValue"></param>
     public void ChangePriceTotal(int addedValue) {
         intPriceTotal += addedValue;
-        tmpPriceTotal.text = "Total: " + intPriceTotal;
+        tmpPriceTotal.text = intPriceTotal.ToString();
         tmpPriceConfirmation.text = intPriceTotal.ToString();
     }
 
@@ -108,7 +108,7 @@ public class GamePurchaser : MonoBehaviour {
         TurnConfirmationBtnOnOff();
         UpdateBankText();
         intPriceTotal = 0;
-        tmpPriceTotal.text = "Total: 0";
+        tmpPriceTotal.text = "0";
         coinManager.SaveCoinsToBank();
     }
 
