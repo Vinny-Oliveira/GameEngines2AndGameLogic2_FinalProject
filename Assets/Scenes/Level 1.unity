@@ -4925,15 +4925,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3659846129141800513, guid: 3154525c82d34b84aaf0fb365c478328,
+    - target: {fileID: 551382044042863423, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8684211688860233331, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -20.000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698818248961882106, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 1577058303
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3154525c82d34b84aaf0fb365c478328, type: 3}

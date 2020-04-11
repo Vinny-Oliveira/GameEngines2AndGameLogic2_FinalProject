@@ -2535,8 +2535,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Watch Ads \nfor Coins"
+  m_text: "Watch Ads \nfor 250 Coins"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2819,8 +2819,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2860,10 +2860,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 8940816982136877186}
-    characterCount: 20
+    characterCount: 24
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 4
+    spaceCount: 5
+    wordCount: 5
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -3604,7 +3604,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnAdsForCoins: {fileID: 8940816982691646399}
   myPlacementId: rewardedVideo
-  intRewardedCoins: 10
+  intRewardedCoins: 250
+  tmpButtonDescription: {fileID: 8940816982136877186}
   myGamePurchaser: {fileID: 6511025511156991304}
 --- !u!1 &8940816982806800865
 GameObject:
