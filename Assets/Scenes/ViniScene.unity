@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74cad2e19aa0b4489b83ce4f64d386d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intTimer: 1
+  intTimer: 5
   tmpTimer: {fileID: 58799875}
   tmpTimeBooster: {fileID: 1247096955}
   animatorTime: {fileID: 1247096954}
