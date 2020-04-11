@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
+using TMPro;
 
 [RequireComponent(typeof(Button))]
 public class AdsForRewards : MonoBehaviour, IUnityAdsListener
@@ -17,11 +18,13 @@ public class AdsForRewards : MonoBehaviour, IUnityAdsListener
     public Button btnAdsForCoins;
     public string myPlacementId = "rewardedVideo";
     public int intRewardedCoins;
+    public TextMeshProUGUI tmpButtonDescription;
     public GamePurchaser myGamePurchaser;
     bool isAdWatched;
 
     void Start() {
         isAdWatched = false;
+        tmpButtonDescription.text = "Watch Ads for " + intRewardedCoins + " Coins";
 
         if (btnAdsForCoins == null) {
             btnAdsForCoins = GetComponent<Button>();
