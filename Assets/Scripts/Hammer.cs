@@ -15,8 +15,7 @@ public class Hammer {
     /// <summary>
     /// No-args Constructor of the Hammer
     /// </summary>
-    public Hammer() {
-        intHealth = defaultMaxHealth;
+    public Hammer() : this(defaultMaxHealth) {
     }
 
     /// <summary>
