@@ -3225,13 +3225,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 8940816983069469591}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 8940816982168148912}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 8940816982849831567}
@@ -3875,8 +3875,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8940816981690882253}
   m_HandleRect: {fileID: 8940816981690882252}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.535906
+  m_Value: 0.99999833
+  m_Size: 0.8733361
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3918,7 +3918,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000030518}
-  m_SizeDelta: {x: 0, y: 206.15}
+  m_SizeDelta: {x: 0, y: 126.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8940816983069469588
 MonoBehaviour:
@@ -4312,6 +4312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: product
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570490694014215743, guid: 4d906dd5c3c595a4894aa5f06d26659b,
+        type: 3}
+      propertyPath: intPrice
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 9199471709230121775, guid: 4d906dd5c3c595a4894aa5f06d26659b,
         type: 3}
@@ -4816,6 +4821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: product
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570490694014215743, guid: 4d906dd5c3c595a4894aa5f06d26659b,
+        type: 3}
+      propertyPath: intPrice
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9199471709230121775, guid: 4d906dd5c3c595a4894aa5f06d26659b,
         type: 3}
