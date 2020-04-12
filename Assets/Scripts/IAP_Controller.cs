@@ -15,14 +15,14 @@ public class IAP_Controller : MonoBehaviour {
     
     [Header("Product Details")]
     public int intAmount;
-    public float intCost;
+    public float fltCost;
 
     /// <summary>
     /// When the panel is enabled, display the 
     /// </summary>
     private void OnEnable() {
         tmpAmount.text = intAmount.ToString();
-        tmpCost.text = intCost.ToString("c2");
+        tmpCost.text = fltCost.ToString("c2");
     }
 
     /// <summary>
