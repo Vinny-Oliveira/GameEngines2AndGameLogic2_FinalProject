@@ -9650,7 +9650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name_id: couch
   audioSource: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 7fd6f6875bfc1cf4aa2b01f189d67743, type: 3}
+  hitSound: {fileID: 8300000, guid: 8610f88c42ad5b84eab9be4c7012ed11, type: 3}
 --- !u!82 &-2358828313705497138
 AudioSource:
   m_ObjectHideFlags: 0
