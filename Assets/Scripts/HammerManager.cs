@@ -16,6 +16,7 @@ public class HammerManager : SingletonManager<HammerManager> {
     //int intStartingHammers;
     [SerializeField]
     int intHammerHealth;
+    public Animator animBrokenHammer;
     
     [Header("UI References")]
     public TextMeshProUGUI tmpHammerCount;
@@ -75,8 +76,10 @@ public class HammerManager : SingletonManager<HammerManager> {
         
         queHammers.Peek().DecreaseHealth();
         
+        // Remove the broken hammer from the peek of the queue
         if (queHammers.Peek().IsHammerBroken()) {
             queHammers.Dequeue();
+            animBrokenHammer.SetTrigger(animBrokenHammer.parameters[0].name);
             tmpHammerCount.text = queHammers.Count.ToString();
         }
     }
