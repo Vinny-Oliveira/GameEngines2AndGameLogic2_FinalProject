@@ -2076,7 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intHammerHealth: 20
-  animBrokenHammer: {fileID: 0}
+  animBrokenHammer: {fileID: 5060673162905644711}
   tmpHammerCount: {fileID: 5060673162905644705}
   tmpReward: {fileID: 5060673162905644707}
   pnl_NoHammers: {fileID: 5060673162905644704}
@@ -5111,7 +5111,7 @@ PrefabInstance:
     - target: {fileID: 2495407162721459785, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.0000305
+      value: -3.000061
       objectReference: {fileID: 0}
     - target: {fileID: 8684211688860233331, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
@@ -5126,7 +5126,7 @@ PrefabInstance:
     - target: {fileID: 8863745440517839253, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.600006
+      value: -2.6000366
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3154525c82d34b84aaf0fb365c478328, type: 3}
@@ -5202,6 +5202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5060673162905644711 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2243669768360228318, guid: 3154525c82d34b84aaf0fb365c478328,
+    type: 3}
+  m_PrefabInstance: {fileID: 5060673162905644702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5459769966378117587
 PrefabInstance:
   m_ObjectHideFlags: 0

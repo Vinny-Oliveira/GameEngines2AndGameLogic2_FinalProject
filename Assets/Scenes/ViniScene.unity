@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intHammerHealth: 20
+  animBrokenHammer: {fileID: 1179461532}
   tmpHammerCount: {fileID: 5060673162905644705}
   tmpReward: {fileID: 5060673162905644708}
   pnl_NoHammers: {fileID: 163506206}
@@ -1566,6 +1567,12 @@ GameObject:
 --- !u!1 &1163590693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7285944958378817332, guid: 3154525c82d34b84aaf0fb365c478328,
+    type: 3}
+  m_PrefabInstance: {fileID: 5060673162905644702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1179461532 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2243669768360228318, guid: 3154525c82d34b84aaf0fb365c478328,
     type: 3}
   m_PrefabInstance: {fileID: 5060673162905644702}
   m_PrefabAsset: {fileID: 0}
@@ -1998,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74cad2e19aa0b4489b83ce4f64d386d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intTimer: 1
+  intTimer: 50
   tmpTimer: {fileID: 58799875}
   tmpTimeBooster: {fileID: 1247096955}
   animatorTime: {fileID: 1247096954}
@@ -2912,7 +2919,7 @@ PrefabInstance:
     - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_text
-      value: $
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 551382043709890655, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
