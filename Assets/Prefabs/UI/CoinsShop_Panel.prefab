@@ -3663,6 +3663,16 @@ PrefabInstance:
       propertyPath: gamePurchaser
       value: 
       objectReference: {fileID: 3757439994017678854}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7788369882460623407, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
         type: 3}
       propertyPath: m_Sprite
@@ -3945,6 +3955,21 @@ PrefabInstance:
       propertyPath: gamePurchaser
       value: 
       objectReference: {fileID: 3757439994017678854}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7788369882460623407, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
         type: 3}
       propertyPath: m_Sprite
@@ -4187,6 +4212,16 @@ PrefabInstance:
       propertyPath: gamePurchaser
       value: 
       objectReference: {fileID: 3757439994017678854}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7788369882460623407, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
         type: 3}
       propertyPath: m_Sprite
@@ -4474,6 +4509,21 @@ PrefabInstance:
       propertyPath: gamePurchaser
       value: 
       objectReference: {fileID: 3757439994017678854}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788369882460623406, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7788369882460623407, guid: 5cd5ab0772c0f6548b68b69cfc8e623a,
         type: 3}
       propertyPath: m_Sprite
