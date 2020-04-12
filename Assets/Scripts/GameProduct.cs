@@ -24,6 +24,7 @@ public class GameProduct : MonoBehaviour {
     public Product product;
     public int intPrice;
     public TextMeshProUGUI tmpPrice;
+    public TextMeshProUGUI tmpTimeBoost;
 
     [Header("UI Control")]
     const int MAX_AMOUNT = 9;
@@ -54,8 +55,10 @@ public class GameProduct : MonoBehaviour {
     /// </summary>
     private void OnEnable() {
         tmpPrice.text = intPrice.ToString();
-        //tmpProductAmount.text = "0";
         btnMinus.interactable = false;
+        if (product != Product.HAMMER) {
+            tmpTimeBoost.text = "+" + (int)product + "s";
+        }
     }
 
     /// <summary>
