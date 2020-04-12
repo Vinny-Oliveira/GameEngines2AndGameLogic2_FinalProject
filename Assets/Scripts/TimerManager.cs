@@ -43,6 +43,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// <param name="newTime"></param>
     public void SetTimer(int newTime) {
         intTimer = newTime;
+        DisplayTimer();
     }
 
     /// <summary>
@@ -92,6 +93,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     public void BoostTimer(int timeBoost) {
         if (timeBoost > 0) { 
             intTimer += timeBoost;
+            DisplayTimer();
             tmpTimeBooster.text = "+" + timeBoost;
             animatorTime.SetTrigger(animatorTime.parameters[0].name);
         }
