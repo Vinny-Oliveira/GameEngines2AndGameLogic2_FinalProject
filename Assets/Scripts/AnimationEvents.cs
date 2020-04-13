@@ -8,6 +8,7 @@ using UnityEngine;
 public class AnimationEvents : MonoBehaviour {
 
     public GameObject panelToActivate;
+    public AudioSource audioSource;
 
     /// <summary>
     /// Activate a panel
@@ -15,6 +16,9 @@ public class AnimationEvents : MonoBehaviour {
     public void ActivatePanel() {
         panelToActivate.SetActive(true);
         gameObject.SetActive(false);
+        if (audioSource != null) {
+            audioSource.Play();
+        }
     }
 
 }

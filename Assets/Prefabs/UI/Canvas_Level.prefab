@@ -1542,6 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelToActivate: {fileID: 585398936199031649}
+  audioSource: {fileID: 0}
 --- !u!1 &2106067533145994480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +1936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelToActivate: {fileID: 3659846129141800513}
+  audioSource: {fileID: 0}
 --- !u!1 &5608846048842047062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelToActivate: {fileID: 585398936199031649}
+  audioSource: {fileID: 0}
 --- !u!1 &7586835675914487921
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,11 +12,10 @@ public class HammerManager : SingletonManager<HammerManager> {
     Queue<Hammer> queHammers = new Queue<Hammer>();
 
     [Header("Hammer Management")]
-    //[SerializeField]
-    //int intStartingHammers;
     [SerializeField]
     int intHammerHealth = 20;
     public Animator animBrokenHammer;
+    public AudioSource audioSource;
     
     [Header("UI References")]
     public TextMeshProUGUI tmpHammerCount;
@@ -80,6 +79,10 @@ public class HammerManager : SingletonManager<HammerManager> {
         if (queHammers.Peek().IsHammerBroken()) {
             queHammers.Dequeue();
             animBrokenHammer.SetTrigger(animBrokenHammer.parameters[0].name);
+            if (audioSource == null) {
+                audioSource = GetComponent<AudioSource>();
+            }
+            audioSource.Play();
             tmpHammerCount.text = queHammers.Count.ToString();
         }
     }
