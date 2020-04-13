@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 69490796113209442}
   - component: {fileID: 3814127369004503516}
   m_Layer: 0
-  m_Name: Wall_Inner
+  m_Name: Wall_Inner M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6093163546933957750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.054, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.99198, z: 2.31816}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.099999994, y: 0.96718055, z: 1.15908}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,4 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructible: {fileID: 11400000, guid: 164bc0853d098c64db3410b7da182917, type: 2}
+  destructible: {fileID: 11400000, guid: 11bc805bd05785b45a517ef9b49a7e77, type: 2}
