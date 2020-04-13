@@ -55,7 +55,14 @@ public class FileReadWrite {
     /// Load data from a json file
     /// </summary>
     public static void ReadDataFromJson() {
-        string dataString = File.ReadAllText(jsonFilePath);
+        string dataString;
+#if UNITY_EDITOR
+        dataString = File.ReadAllText(jsonFilePath);
+#elif UNITY_ANDROID
+        WWW reader = new WWW(jsonFilePath);
+        while (!reader.isDone) { } // Do nothing
+        dataString = reader.text;
+#endif
         loadedData = JsonUtility.FromJson<SavedData>(dataString);
     }
 
