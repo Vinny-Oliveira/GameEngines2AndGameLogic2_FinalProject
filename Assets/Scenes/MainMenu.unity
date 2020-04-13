@@ -5913,9 +5913,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tap on everything to \ndestroy the whole house. \n\nYou have a limited
-    \nnumber of sledgehammers \nand you're racing the clock. \n\nGood luck, Home
-    Wrecker!"
+  m_text: "Destroy the whole house \nby tapping everything from \nthe top floor downwards.
+    \n\nYou have a limited number of \nsledgehammers and \nyou're racing the clock.
+    \n\nGood luck, Home Wrecker"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 843137a390061634e9ab3d78394b01e1, type: 2}
   m_sharedMaterial: {fileID: -1794290661759952446, guid: 843137a390061634e9ab3d78394b01e1,
@@ -5985,12 +5985,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1434945801}
-    characterCount: 149
+    characterCount: 179
     spriteCount: 0
-    spaceCount: 30
-    wordCount: 24
+    spaceCount: 35
+    wordCount: 28
     linkCount: 0
-    lineCount: 8
+    lineCount: 9
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
