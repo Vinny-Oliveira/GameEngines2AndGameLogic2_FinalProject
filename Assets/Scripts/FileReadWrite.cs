@@ -64,10 +64,10 @@ public class FileReadWrite {
         //    File.WriteAllText(filePath, dataString);
         //}
 #endif
-        //File.WriteAllText(filePath, dataString);
-        StreamWriter writer = new StreamWriter(filePath);
-        writer.Write(dataString);
-        writer.Close();
+        File.WriteAllText(filePath, dataString);
+        //StreamWriter writer = new StreamWriter(filePath);
+        //writer.Write(dataString);
+        //writer.Close();
     }
 
     /// <summary>
