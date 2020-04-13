@@ -405,6 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6273284482549554757}
   - component: {fileID: 7889636646306061747}
+  - component: {fileID: 5368351428052446900}
   m_Layer: 0
   m_Name: Refrigerator_LowPoly_v1
   m_TagString: Untagged
@@ -444,7 +445,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca117416be93285439ee9c1dd7dc3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructible: {fileID: 0}
+  destructible: {fileID: 11400000, guid: b7a99aa1dc9f0f84c8ace80e75fc8086, type: 2}
+--- !u!65 &5368351428052446900
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013361529290550358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0123959, y: 2.3296452, z: 1.3277357}
+  m_Center: {x: -0.0061979294, y: 1.1418138, z: 0.0043736696}
 --- !u!1 &7608731287770679001
 GameObject:
   m_ObjectHideFlags: 0
