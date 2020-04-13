@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TimeCounter {
+/// <summary>
+/// Namespace that contains all the functions that deal with time
+/// </summary>
+namespace TimeCounting {
 	
-    public class TimeConter : MonoBehaviour {
+    public class TimeCounter : MonoBehaviour {
 
         public int intTimer;
         public bool isTimerEnabled;
@@ -21,7 +24,11 @@ namespace TimeCounter {
             tmpTimer.text = strMinutes + ":" + strSeconds;
         }
 
-
+        /// <summary>
+        /// Run the timer continuosly until it zeroes
+        /// </summary>
+        /// <param name="tmpTimer"></param>
+        /// <returns></returns>
         public IEnumerator RunTimer(TMPro.TextMeshProUGUI tmpTimer) {
             while ((intTimer > -1) && (isTimerEnabled)) {
                 yield return new WaitForSeconds(1);

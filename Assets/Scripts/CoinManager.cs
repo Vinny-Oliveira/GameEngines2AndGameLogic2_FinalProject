@@ -16,11 +16,17 @@ public class CoinManager : SingletonManager<CoinManager> {
     // UI References
     public TextMeshProUGUI tmpCoins;
 
+    // Wait loop for the level select screen
+    public HammerWaitLoop hammerWaitLoop;
+
     private void Start() {
         intCoinsInLevel = 0;
         SavedData loadedData = FileReadWrite.ReadDataFromJson();
         intBankOfCoins = loadedData.totalCoins;
         HammerManager.instance.SetHammers(loadedData.hammers);
+        if ((hammerWaitLoop != null) && (hammerWaitLoop.CanLoop())) {
+            StartCoroutine(hammerWaitLoop.RunWaitLoop());
+        }
     }
 
     /// <summary>
