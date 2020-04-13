@@ -46,28 +46,30 @@ public abstract class Destructible : MonoBehaviour {
     }
 
     /// <summary>
-    /// Event to detect mouse or touch down
+    /// Decrease the ojbect's health if it is clicked/touched
     /// </summary>
     private void OnMouseDown() {
-
-#if !UNITY_EDITOR
-        fingerID = 0;
-#endif
-        if (!EventSystem.current.IsPointerOverGameObject(fingerID)) {
+        if (!IsPointerOverUIObject()) {
             DecreaseHealth();
         }
+    }
 
-//#if UNITY_EDITOR
-//        if (EventSystem.current.IsPointerOverGameObject()) {
-//            return;
-//        }
-////#elif UNITY_ANDROID
-//        EventSystem eventSystem = EventSystem.current;
-//        if (eventSystem.IsPointerOverGameObject(Input.touches[0].fingerId) && eventSystem.currentSelectedGameObject != null) {
-//            return;
-//        }
-//#endif
-//        DecreaseHealth();
+    /// <summary>
+    /// Check if the mouse or touch is over a UI object
+    /// </summary>
+    /// <returns></returns>
+    bool IsPointerOverUIObject() {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        Vector2 position;
+#if UNITY_EDITOR
+        position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+#elif UNITY_ANDROID
+        position = Input.GetTouch(0).position;
+#endif
+        eventDataCurrentPosition.position = position;
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return (results.Count > 0);
     }
 
     /// <summary>
