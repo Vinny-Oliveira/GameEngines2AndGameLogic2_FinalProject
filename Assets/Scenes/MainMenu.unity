@@ -5045,8 +5045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene:
-    m_SceneAsset: {fileID: 102900000, guid: f9e8adbbabf46ed4791a89ddb98a6ce7, type: 3}
-    m_SceneName: Level 1
+    m_SceneAsset: {fileID: 102900000, guid: 4aadc73b4e9670446923c4409db4829f, type: 3}
+    m_SceneName: LevelSelect
 --- !u!1 &1115200887
 GameObject:
   m_ObjectHideFlags: 0
