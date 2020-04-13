@@ -17,9 +17,12 @@ public class TimerManager : SingletonManager<TimerManager> {
     [Header("UI References")]
     public TextMeshProUGUI tmpTimer;
     public TextMeshProUGUI tmpTimeBooster;
-    public Animator animatorTime;
     public TextMeshProUGUI tmpReward;
     public GameObject pnl_TimesUp;
+
+    [Header("Time Animation")]
+    public Animator animatorTime;
+    public AudioSource audioSource;
 
     bool isTimerEnabled;
 
@@ -96,6 +99,10 @@ public class TimerManager : SingletonManager<TimerManager> {
             DisplayTimer();
             tmpTimeBooster.text = "+" + timeBoost;
             animatorTime.SetTrigger(animatorTime.parameters[0].name);
+            if (audioSource == null) {
+                audioSource = GetComponent<AudioSource>();
+            }
+            audioSource.Play();
         }
     }
 

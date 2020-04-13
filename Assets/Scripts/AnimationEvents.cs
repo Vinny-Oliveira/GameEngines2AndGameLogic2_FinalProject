@@ -11,14 +11,21 @@ public class AnimationEvents : MonoBehaviour {
     public AudioSource audioSource;
 
     /// <summary>
-    /// Activate a panel
+    /// Play the sound effect of the animation
     /// </summary>
-    public void ActivatePanel() {
-        panelToActivate.SetActive(true);
-        gameObject.SetActive(false);
+    public void PlaySoundEffect() { 
         if (audioSource != null) {
             audioSource.Play();
         }
+    }
+
+    /// <summary>
+    /// Activate a panel
+    /// </summary>
+    public void ActivatePanel() {
+        while (audioSource.isPlaying) { }
+        panelToActivate.SetActive(true);
+        gameObject.SetActive(false);
     }
 
 }
