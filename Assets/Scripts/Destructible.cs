@@ -4,10 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 /// <summary>
 /// Base class that models all the objects that are destructible by game mechanics
 /// </summary>
 public abstract class Destructible : MonoBehaviour {
+
+    static int fingerID = -1;
 
     [SerializeField]
     DestructibleSO destructible;
@@ -46,16 +49,25 @@ public abstract class Destructible : MonoBehaviour {
     /// Event to detect mouse or touch down
     /// </summary>
     private void OnMouseDown() {
-#if UNITY_EDITOR
-        if (EventSystem.current.IsPointerOverGameObject()) {
-            return;
+
+#if !UNITY_EDITOR
+        fingerID = 0;
+#endif
+        if (!EventSystem.current.IsPointerOverGameObject(fingerID)) {
+            DecreaseHealth();
         }
-#elif UNITY_ANDROID
-        if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) {
-            return;
-        }
-#endif  
-        DecreaseHealth();
+
+//#if UNITY_EDITOR
+//        if (EventSystem.current.IsPointerOverGameObject()) {
+//            return;
+//        }
+////#elif UNITY_ANDROID
+//        EventSystem eventSystem = EventSystem.current;
+//        if (eventSystem.IsPointerOverGameObject(Input.touches[0].fingerId) && eventSystem.currentSelectedGameObject != null) {
+//            return;
+//        }
+//#endif
+//        DecreaseHealth();
     }
 
     /// <summary>

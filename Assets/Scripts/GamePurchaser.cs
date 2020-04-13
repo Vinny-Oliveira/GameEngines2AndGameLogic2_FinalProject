@@ -24,6 +24,7 @@ public class GamePurchaser : MonoBehaviour {
 
     [HideInInspector]
     int intPriceTotal;
+    GameProduct[] gameProducts;
 
     /// <summary>
     /// Check if the total current price is greater than zero
@@ -37,6 +38,8 @@ public class GamePurchaser : MonoBehaviour {
     /// Update the displayed values when the panel is enabled
     /// </summary>
     private void OnEnable(){
+        gameProducts = contentView.GetComponentsInChildren<GameProduct>();
+        ResetValues(gameProducts);
         UpdateBankText();
     }
 
@@ -68,10 +71,8 @@ public class GamePurchaser : MonoBehaviour {
             coinManager.SaveCoinsToBank(-intPriceTotal); // may throw
 
             // Add the purchased items and reset purchase values
-            GameProduct[] gameProducts = contentView.GetComponentsInChildren<GameProduct>();
             foreach (var gameProduct in gameProducts) {
-                switch (gameProduct.product)
-                {
+                switch (gameProduct.product) {
                     case Product.HAMMER:
                         HammerManager.instance.PopulateHammerQueue(gameProduct.GetAmount());
                         break;
@@ -85,9 +86,10 @@ public class GamePurchaser : MonoBehaviour {
                         break;
                 }
 
-                ResetValues(gameProduct, coinManager);
+                ResetValues(gameProduct);
             }
 
+            UpdateBankText();
             pnl_ThxPurchase.SetActive(true);
         } catch (System.InvalidOperationException ex) {
             pnl_NotEnoughCoins.SetActive(true);
@@ -96,20 +98,29 @@ public class GamePurchaser : MonoBehaviour {
     }
 
     /// <summary>
-    /// Reset all panel values
+    /// Reset product panel values
     /// </summary>
     /// <param name="gameProduct"></param>
     /// <param name="coinManager"></param>
-    void ResetValues(GameProduct gameProduct, CoinManager coinManager) {
+    void ResetValues(GameProduct gameProduct) {
         gameProduct.tmpProductAmount.text = "0";
         gameProduct.SetAmount(0);
         gameProduct.btnMinus.interactable = false;
         gameProduct.btnPlus.interactable = true;
         TurnConfirmationBtnOnOff();
-        UpdateBankText();
         intPriceTotal = 0;
         tmpPriceTotal.text = "0";
-        coinManager.SaveCoinsToBank();
+    }
+
+    /// <summary>
+    /// Reset values of all product panels
+    /// </summary>
+    /// <param name="gameProducts"></param>
+    /// <param name="coinManager"></param>
+    void ResetValues(GameProduct[] gameProducts) { 
+        foreach (var gameProduct in gameProducts) {
+            ResetValues(gameProduct);
+        }
     }
 
     /// <summary>

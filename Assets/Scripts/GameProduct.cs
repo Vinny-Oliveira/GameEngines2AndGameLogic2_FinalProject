@@ -55,6 +55,8 @@ public class GameProduct : MonoBehaviour {
     /// </summary>
     private void OnEnable() {
         tmpPrice.text = intPrice.ToString();
+        tmpProductAmount.text = "0";
+        btnPlus.interactable = true;
         btnMinus.interactable = false;
         if (product != Product.HAMMER) {
             tmpTimeBoost.text = "+" + (int)product + "s";
