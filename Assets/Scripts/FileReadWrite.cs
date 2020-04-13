@@ -49,12 +49,25 @@ public class FileReadWrite {
         Debug.Log("SAVING DATA TO JSON FILE");
         string dataString = JsonUtility.ToJson(savedData);
         string filePath;
+
+
 #if UNITY_EDITOR
         filePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
 #elif UNITY_ANDROID
         filePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+
+        //if (!Directory.Exists(Application.persistentDataPath)) {
+        //    Directory.CreateDirectory(Application.persistentDataPath);
+        //} 
+        //if (!File.Exists(filePath)) {
+        //    File.Create(filePath).Close();
+        //    File.WriteAllText(filePath, dataString);
+        //}
 #endif
-        File.WriteAllText(filePath, dataString);
+        //File.WriteAllText(filePath, dataString);
+        StreamWriter writer = new StreamWriter(filePath);
+        writer.Write(dataString);
+        writer.Close();
     }
 
     /// <summary>
