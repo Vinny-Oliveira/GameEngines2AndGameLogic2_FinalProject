@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
-  m_Name: Wall_Inner 1
+  m_Name: Wall_InnerS
   m_EditorClassIdentifier: 
   intHealth: 2
   intCoinValue: 1
   intTimeBooster: 1
-  particleDestruction: {fileID: 4106514414136337055, guid: d2851c573c0861f448ce334e135c712d,
+  particleDestruction: {fileID: 3365264186541491893, guid: e361d728dda066a43801580db28545e8,
     type: 3}
   particleDamage: {fileID: 9142820415948450338, guid: 6b5ef69a3cdecce40ba9f479de16c33c,
     type: 3}
