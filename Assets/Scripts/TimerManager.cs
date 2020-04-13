@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Threading;
+using TimeCounter;
 
 /// <summary>
 /// Manage the timer of the level
@@ -24,10 +25,12 @@ public class TimerManager : SingletonManager<TimerManager> {
     public Animator animatorTime;
     public AudioSource audioSource;
 
-    bool isTimerEnabled;
+    //bool isTimerEnabled;
+    TimeConter timeConter = new TimeConter();
 
     // Start is called before the first frame update
     void Start() {
+        timeConter.intTimer = intTimer;
         WinLossManager.SetRetryState(false);
         StartTimer();
     }
@@ -37,7 +40,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     /// <returns></returns>
     public int GetTimer() {
-        return intTimer;
+        return timeConter.intTimer;
     }
 
     /// <summary>
@@ -45,15 +48,15 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     /// <param name="newTime"></param>
     public void SetTimer(int newTime) {
-        intTimer = newTime;
-        DisplayTimer();
+        timeConter.intTimer = newTime;
+        timeConter.DisplayTimer(timeConter.intTimer, tmpTimer);
     }
 
     /// <summary>
     /// Enable the timer and run it
     /// </summary>
     public void StartTimer() {
-        isTimerEnabled = true;
+        timeConter.isTimerEnabled = true;
         StartCoroutine(RunTimer());
     }
 
@@ -63,15 +66,10 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// <returns></returns>
     IEnumerator RunTimer() {
 
-        while ((intTimer > -1) && (isTimerEnabled)) {
-            yield return new WaitForSeconds(1);
+        yield return StartCoroutine(timeConter.RunTimer(tmpTimer));
 
-            DisplayTimer();
-            intTimer--;
-        }
-
-        if (intTimer < 1) {
-            intTimer = 0;
+        if (timeConter.intTimer < 1) {
+            timeConter.intTimer = 0;
             if (WinLossManager.GetRetryState()) {
                 AnalyticsManager.Increase2ndGameOverAnalytics();
             } else {
@@ -86,7 +84,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// Disable the timer
     /// </summary>
     public void DisableTimer() {
-        isTimerEnabled = false;
+        timeConter.isTimerEnabled = false;
     }
 
     /// <summary>
@@ -94,9 +92,10 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     /// <param name="timeBoost"></param>
     public void BoostTimer(int timeBoost) {
-        if (timeBoost > 0) { 
-            intTimer += timeBoost;
-            DisplayTimer();
+        if (timeBoost > 0) {
+            timeConter.intTimer += timeBoost;
+            //DisplayTimer();
+            timeConter.DisplayTimer(intTimer, tmpTimer);
             tmpTimeBooster.text = "+" + timeBoost;
             animatorTime.SetTrigger(animatorTime.parameters[0].name);
             if (audioSource == null) {
@@ -106,15 +105,15 @@ public class TimerManager : SingletonManager<TimerManager> {
         }
     }
 
-    /// <summary>
-    /// Display the timer with the proper format
-    /// </summary>
-    void DisplayTimer() {
-        int intMinutes = intTimer / 60;
-        int intSeconds = intTimer % 60;
+    ///// <summary>
+    ///// Display the timer with the proper format
+    ///// </summary>
+    //void DisplayTimer() {
+    //    int intMinutes = intTimer / 60;
+    //    int intSeconds = intTimer % 60;
 
-        string strMinutes = ((intMinutes < 10) ? ("0" + intMinutes) : (intMinutes.ToString()));
-        string strSeconds = ((intSeconds < 10) ? ("0" + intSeconds) : (intSeconds.ToString()));
-        tmpTimer.text = strMinutes + ":" + strSeconds;
-    }
+    //    string strMinutes = ((intMinutes < 10) ? ("0" + intMinutes) : (intMinutes.ToString()));
+    //    string strSeconds = ((intSeconds < 10) ? ("0" + intSeconds) : (intSeconds.ToString()));
+    //    tmpTimer.text = strMinutes + ":" + strSeconds;
+    //}
 }
