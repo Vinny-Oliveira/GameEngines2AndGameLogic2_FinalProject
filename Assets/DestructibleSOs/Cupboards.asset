@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c6dcba5ae4594fbb9b8828e0821aa, type: 3}
   m_Name: Cupboards
   m_EditorClassIdentifier: 
-  intHealth: 0
-  intCoinValue: 0
-  intTimeBooster: 0
+  intHealth: 5
+  intCoinValue: 5
+  intTimeBooster: 1
   particleDestruction: {fileID: 0}
   particleDamage: {fileID: 0}
-  soundWhenHit: {fileID: 0}
+  soundWhenHit: {fileID: 8300000, guid: 7fd6f6875bfc1cf4aa2b01f189d67743, type: 3}
