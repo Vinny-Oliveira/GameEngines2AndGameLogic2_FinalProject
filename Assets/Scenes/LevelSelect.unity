@@ -6786,7 +6786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3fb8335d7d9684c99acc581df88633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intHammerHealth: 0
+  intHammerHealth: 20
   animBrokenHammer: {fileID: 0}
   tmpHammerCount: {fileID: 174061075}
   tmpReward: {fileID: 0}

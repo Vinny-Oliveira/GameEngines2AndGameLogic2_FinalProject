@@ -15,7 +15,7 @@ public class HammerManager : SingletonManager<HammerManager> {
     //[SerializeField]
     //int intStartingHammers;
     [SerializeField]
-    int intHammerHealth;
+    int intHammerHealth = 20;
     public Animator animBrokenHammer;
     
     [Header("UI References")]
