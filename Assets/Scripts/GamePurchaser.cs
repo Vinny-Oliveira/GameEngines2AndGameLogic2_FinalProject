@@ -22,7 +22,10 @@ public class GamePurchaser : MonoBehaviour {
     public TextMeshProUGUI tmpPriceConfirmation;
     public TextMeshProUGUI tmpBankConfirmation;
 
-    [HideInInspector]
+    [Header("References for the Game Over panel")]
+    public Button btnContinue;
+
+    // Private control
     int intPriceTotal;
     GameProduct[] gameProducts;
 
@@ -92,6 +95,10 @@ public class GamePurchaser : MonoBehaviour {
 
             UpdateBankText();
             pnl_ThxPurchase.SetActive(true);
+            HammerManager hammerManager = HammerManager.instance;
+            if ((hammerManager.GetHammers().Count > 0) && (TimerManager.instance.GetTimer() > 0)) {
+                btnContinue.interactable = true;
+            }
         } catch (System.InvalidOperationException ex) {
             pnl_NotEnoughCoins.SetActive(true);
             Debug.Log(ex.Message);
