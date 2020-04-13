@@ -48,23 +48,28 @@ public class FileReadWrite {
     public static void WriteDataToJson() {
         Debug.Log("SAVING DATA TO JSON FILE");
         string dataString = JsonUtility.ToJson(savedData);
-        string filePath;
+        string jsonFilePath;
 
+        if (Directory.Exists(Application.persistentDataPath)) {
+            jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+        } else {
+            jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+        }
 
-#if UNITY_EDITOR
-        filePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
-#elif UNITY_ANDROID
-        filePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+        if (!File.Exists(jsonFilePath)) {
+            File.Create(jsonFilePath).Close();
+        }
 
-        //if (!Directory.Exists(Application.persistentDataPath)) {
-        //    Directory.CreateDirectory(Application.persistentDataPath);
-        //} 
-        //if (!File.Exists(filePath)) {
-        //    File.Create(filePath).Close();
-        //    File.WriteAllText(filePath, dataString);
-        //}
-#endif
-        File.WriteAllText(filePath, dataString);
+        dataString = JsonUtility.ToJson(savedData);
+        File.WriteAllText(jsonFilePath, dataString);
+//        //#if UNITY_EDITOR
+//        jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+//        //#elif UNITY_ANDROID
+//        jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+
+        
+////#endif
+//        File.WriteAllText(jsonFilePath, dataString);
         //StreamWriter writer = new StreamWriter(filePath);
         //writer.Write(dataString);
         //writer.Close();
@@ -74,15 +79,36 @@ public class FileReadWrite {
     /// Load data from a json file
     /// </summary>
     public static void ReadDataFromJson() {
-        jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+        //jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
         string dataString;
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
+        
+        //#elif UNITY_ANDROID
+        //jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+
+        if (Directory.Exists(Application.persistentDataPath)) {
+            jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+        } else {
+            jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+        }
+
+        if (!File.Exists(jsonFilePath)) {
+            File.Create(jsonFilePath).Close();
+
+            var newQueue = new Queue<Hammer>();
+            for (int i = 0; i < 10; i++) {
+                newQueue.Enqueue(new Hammer());
+            }
+
+            SetSavedData(0, newQueue);
+            dataString = JsonUtility.ToJson(savedData);
+            File.WriteAllText(jsonFilePath, dataString);
+        }
+        //WWW reader = new WWW(jsonFilePath);
+        //while (!reader.isDone) { } // Do nothing
+        //dataString = reader.text;
+        //#endif
         dataString = File.ReadAllText(jsonFilePath);
-#elif UNITY_ANDROID
-        WWW reader = new WWW(jsonFilePath);
-        while (!reader.isDone) { } // Do nothing
-        dataString = reader.text;
-#endif
         loadedData = JsonUtility.FromJson<SavedData>(dataString);
     }
 

@@ -10,7 +10,7 @@ public class Hammer {
 
     public int intHealth;
 
-    static int defaultMaxHealth = 5;
+    static int defaultMaxHealth = 20;
 
     /// <summary>
     /// No-args Constructor of the Hammer
