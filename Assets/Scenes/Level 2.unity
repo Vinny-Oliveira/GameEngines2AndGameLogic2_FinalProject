@@ -7494,9 +7494,10 @@ MonoBehaviour:
   intTimer: 10
   tmpTimer: {fileID: 58799875}
   tmpTimeBooster: {fileID: 5060673162905644710}
-  animatorTime: {fileID: 5060673162905644709}
   tmpReward: {fileID: 5060673162905644707}
   pnl_TimesUp: {fileID: 5060673162905644703}
+  animatorTime: {fileID: 5060673162905644709}
+  audioSource: {fileID: 0}
 --- !u!4 &1751187089
 Transform:
   m_ObjectHideFlags: 0
@@ -8919,6 +8920,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 551382043888445541, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_text
+      value: Level 2
+      objectReference: {fileID: 0}
     - target: {fileID: 551382044042863423, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_IsActive
@@ -8927,7 +8933,7 @@ PrefabInstance:
     - target: {fileID: 2495407162721459785, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.000061
+      value: -3.0000916
       objectReference: {fileID: 0}
     - target: {fileID: 2699804504573802847, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
@@ -9067,7 +9073,7 @@ PrefabInstance:
     - target: {fileID: 8863745440517839253, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.6000366
+      value: -2.6000671
       objectReference: {fileID: 0}
     - target: {fileID: 9213204960342225000, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
