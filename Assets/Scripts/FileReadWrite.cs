@@ -21,23 +21,17 @@ public class FileReadWrite {
     static SavedData savedData = new SavedData();
     static SavedData loadedData = new SavedData();
 
-    // Json file name and path
-    static string jsonFileName = "savedData.json";
-    static string jsonFilePath;// = Application.streamingAssetsPath + "/savedData.json";
+    // Json file name
+    static readonly string jsonFileName = "savedData.json";
 
-    /// <summary>
-    /// Get the loaded data
-    /// </summary>
-    /// <returns></returns>
-    public static SavedData GetLoadedData() { 
-        return loadedData; 
-    }
+    // Starting hammers for a brand new game
+    static readonly int startingHammers = 15;
 
     /// <summary>
     /// Set new values for the saved data
     /// </summary>
     /// <param name="newCoins"></param>
-    public static void SetSavedData(int newCoins, Queue<Hammer> newHammers) { 
+    static void SetSavedData(int newCoins, Queue<Hammer> newHammers) { 
         savedData.totalCoins = newCoins;
         savedData.hammers = newHammers.ToList();
     }
@@ -47,69 +41,74 @@ public class FileReadWrite {
     /// </summary>
     public static void WriteDataToJson() {
         Debug.Log("SAVING DATA TO JSON FILE");
-        string dataString = JsonUtility.ToJson(savedData);
-        string jsonFilePath;
 
-        if (Directory.Exists(Application.persistentDataPath)) {
-            jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
-        } else {
-            jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
-        }
-
-        if (!File.Exists(jsonFilePath)) {
-            File.Create(jsonFilePath).Close();
-        }
+        string dataString;
+        string jsonFilePath = DataPath();
+        CheckFileExistance(jsonFilePath);
 
         dataString = JsonUtility.ToJson(savedData);
         File.WriteAllText(jsonFilePath, dataString);
-//        //#if UNITY_EDITOR
-//        jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
-//        //#elif UNITY_ANDROID
-//        jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+    }
 
-        
-////#endif
-//        File.WriteAllText(jsonFilePath, dataString);
-        //StreamWriter writer = new StreamWriter(filePath);
-        //writer.Write(dataString);
-        //writer.Close();
+    /// <summary>
+    /// Save a data string to a json file
+    /// </summary>
+    /// <param name="newCoins"></param>
+    /// <param name="newHammers"></param>
+    public static void WriteDataToJson(int newCoins, Queue<Hammer> newHammers) {
+        SetSavedData(newCoins, newHammers);
+        WriteDataToJson();
     }
 
     /// <summary>
     /// Load data from a json file
     /// </summary>
-    public static void ReadDataFromJson() {
-        //jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+    public static SavedData ReadDataFromJson() {
         string dataString;
-//#if UNITY_EDITOR
-        
-        //#elif UNITY_ANDROID
-        //jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+        string jsonFilePath = DataPath();
+        CheckFileExistance(jsonFilePath, true);
 
-        if (Directory.Exists(Application.persistentDataPath)) {
-            jsonFilePath = Path.Combine(Application.persistentDataPath, jsonFileName);
-        } else {
-            jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
-        }
-
-        if (!File.Exists(jsonFilePath)) {
-            File.Create(jsonFilePath).Close();
-
-            var newQueue = new Queue<Hammer>();
-            for (int i = 0; i < 10; i++) {
-                newQueue.Enqueue(new Hammer());
-            }
-
-            SetSavedData(0, newQueue);
-            dataString = JsonUtility.ToJson(savedData);
-            File.WriteAllText(jsonFilePath, dataString);
-        }
-        //WWW reader = new WWW(jsonFilePath);
-        //while (!reader.isDone) { } // Do nothing
-        //dataString = reader.text;
-        //#endif
         dataString = File.ReadAllText(jsonFilePath);
         loadedData = JsonUtility.FromJson<SavedData>(dataString);
+        return loadedData;
     }
 
+    /// <summary>
+    /// Give a first time player a starting amount of hammers
+    /// </summary>
+    static void SetStartingData() {
+        var newQueue = new Queue<Hammer>();
+        for (int i = 0; i < startingHammers; i++) {
+            newQueue.Enqueue(new Hammer());
+        }
+
+        SetSavedData(0, newQueue);
+    }
+
+    /// <summary>
+    /// Set the saved data's file path
+    /// </summary>
+    /// <returns></returns>
+    static string DataPath() { 
+        if (Directory.Exists(Application.persistentDataPath)) {
+            return Path.Combine(Application.persistentDataPath, jsonFileName);
+        }
+        return Path.Combine(Application.streamingAssetsPath, jsonFileName);
+    }
+
+    /// <summary>
+    /// Check if the file exists and, if you are trying to read it, set a starting data for it
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <param name="isReading"></param>
+    static void CheckFileExistance(string filePath, bool isReading = false) {
+        if (!File.Exists(filePath)){
+            File.Create(filePath).Close();
+            if (isReading) { 
+                SetStartingData();
+                string dataString = JsonUtility.ToJson(savedData);
+                File.WriteAllText(filePath, dataString);
+            }
+        }
+    }
 }

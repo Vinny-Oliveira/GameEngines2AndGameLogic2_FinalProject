@@ -18,8 +18,7 @@ public class CoinManager : SingletonManager<CoinManager> {
 
     private void Start() {
         intCoinsInLevel = 0;
-        FileReadWrite.ReadDataFromJson();
-        SavedData loadedData = FileReadWrite.GetLoadedData();
+        SavedData loadedData = FileReadWrite.ReadDataFromJson();
         intBankOfCoins = loadedData.totalCoins;
         HammerManager.instance.SetHammers(loadedData.hammers);
     }
@@ -76,15 +75,14 @@ public class CoinManager : SingletonManager<CoinManager> {
         }
 
         intBankOfCoins += coinsToSave;
-        SaveBankToFile();
+        SaveBankAndHammers();
     }
 
     /// <summary>
-    /// Save the number of coins in the banl to a json file
+    /// Save the number of coins in the bank and the current hammers to a json file
     /// </summary>
-    void SaveBankToFile() {
-        FileReadWrite.SetSavedData(intBankOfCoins, HammerManager.instance.GetHammers());
-        FileReadWrite.WriteDataToJson();
+    public void SaveBankAndHammers() {
+        FileReadWrite.WriteDataToJson(intBankOfCoins, HammerManager.instance.GetHammers());
         Debug.Log("Coins in bank: " + intBankOfCoins);
     }
 }

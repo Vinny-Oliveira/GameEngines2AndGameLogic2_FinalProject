@@ -87,6 +87,7 @@ public class GamePurchaser : MonoBehaviour {
                 }
 
                 ResetValues(gameProduct);
+                coinManager.SaveBankAndHammers();
             }
 
             UpdateBankText();
