@@ -21,8 +21,9 @@ public class FileReadWrite {
     static SavedData savedData = new SavedData();
     static SavedData loadedData = new SavedData();
 
-    // Json file path
-    static string jsonFilePath = Application.streamingAssetsPath + "/savedData.json";
+    // Json file name and path
+    static string jsonFileName = "savedData.json";
+    static string jsonFilePath;// = Application.streamingAssetsPath + "/savedData.json";
 
     /// <summary>
     /// Get the loaded data
@@ -46,15 +47,21 @@ public class FileReadWrite {
     /// </summary>
     public static void WriteDataToJson() {
         Debug.Log("SAVING DATA TO JSON FILE");
-
         string dataString = JsonUtility.ToJson(savedData);
-        File.WriteAllText(jsonFilePath, dataString);
+        string filePath;
+#if UNITY_EDITOR
+        filePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+#elif UNITY_ANDROID
+        filePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+#endif
+        File.WriteAllText(filePath, dataString);
     }
 
     /// <summary>
     /// Load data from a json file
     /// </summary>
     public static void ReadDataFromJson() {
+        jsonFilePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
         string dataString;
 #if UNITY_EDITOR
         dataString = File.ReadAllText(jsonFilePath);
