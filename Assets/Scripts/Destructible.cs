@@ -10,8 +10,6 @@ using UnityEngine.EventSystems;
 /// </summary>
 public abstract class Destructible : MonoBehaviour {
 
-    static int fingerID = -1;
-
     [SerializeField]
     DestructibleSO destructible;
 

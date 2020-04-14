@@ -45,4 +45,18 @@ public class WinLossManager {
         }
     }
 
+    /// <summary>
+    /// Increase game over analytics depending on which run of the level the player is
+    /// </summary>
+    /// <param name="winLossPanel"></param>
+    /// <param name="tmpReward"></param>
+    public static void SendGameOverAnalytics(GameObject winLossPanel, TextMeshProUGUI tmpReward) { 
+        if (isRetrying) {
+            AnalyticsManager.Increase2ndGameOverAnalytics();
+        } else {
+            AnalyticsManager.Increase1stGameOverAnalytics();
+        }
+
+        DisplayWinLossPanel(winLossPanel, tmpReward);
+    }
 }
