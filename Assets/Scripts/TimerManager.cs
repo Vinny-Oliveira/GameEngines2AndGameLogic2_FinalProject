@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Threading;
-using TimeCounting;
 
 /// <summary>
 /// Manage the timer of the level
@@ -30,7 +29,7 @@ public class TimerManager : SingletonManager<TimerManager> {
 
     // Start is called before the first frame update
     void Start() {
-        timeCounter.intTimer = intTimer;
+        timeCounter.SetTimer(intTimer);
         WinLossManager.SetRetryState(false);
         StartTimer();
     }
@@ -40,7 +39,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     /// <returns></returns>
     public int GetTimer() {
-        return timeCounter.intTimer;
+        return timeCounter.GetTimer();
     }
 
     /// <summary>
@@ -48,15 +47,15 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// </summary>
     /// <param name="newTime"></param>
     public void SetTimer(int newTime) {
-        timeCounter.intTimer = newTime;
-        timeCounter.DisplayTimer(timeCounter.intTimer, tmpTimer);
+        timeCounter.SetTimer(newTime);
+        timeCounter.DisplayTimer(timeCounter.GetTimer(), tmpTimer);
     }
 
     /// <summary>
     /// Enable the timer and run it
     /// </summary>
     public void StartTimer() {
-        timeCounter.isTimerEnabled = true;
+        timeCounter.SetTimerState(true);
         StartCoroutine(RunTimer());
     }
 
@@ -73,8 +72,8 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// Handle what happens when the timer stops running, whether because it has run out or if is was disabled
     /// </summary>
     void HandleTimerStop() { 
-        if (timeCounter.intTimer < 1) {
-            timeCounter.intTimer = 0;
+        if (timeCounter.GetTimer() < 1) {
+            timeCounter.SetTimer(0);
             WinLossManager.SendGameOverAnalytics(pnl_TimesUp, tmpReward);
         }
     }
@@ -83,7 +82,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// Disable the timer
     /// </summary>
     public void DisableTimer() {
-        timeCounter.isTimerEnabled = false;
+        timeCounter.SetTimerState(false);
     }
 
     /// <summary>
@@ -92,8 +91,8 @@ public class TimerManager : SingletonManager<TimerManager> {
     /// <param name="timeBoost"></param>
     public void BoostTimer(int timeBoost) {
         if (timeBoost > 0) {
-            timeCounter.intTimer += timeBoost;
-            timeCounter.DisplayTimer(timeCounter.intTimer, tmpTimer);
+            timeCounter.IncreaseTimer(timeBoost);
+            timeCounter.DisplayTimer(timeCounter.GetTimer(), tmpTimer);
             tmpTimeBooster.text = "+" + timeBoost;
             animatorTime.SetTrigger(animatorTime.parameters[0].name);
             if (audioSource == null) {

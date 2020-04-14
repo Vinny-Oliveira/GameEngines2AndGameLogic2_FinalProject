@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TimeCounting;
 using TMPro;
 
 /// <summary>
 /// Manage the wait loop that rewards the player with extra hammers
 /// </summary>
-public class HammerWaitLoop : SingletonManager<HammerWaitLoop> {
+public class HammerWaitLoop : TimeCounter {
 
-    public int loopTime;
-    public int maxHammers;
-    TimeCounter timeCounter = new TimeCounter();
+    [SerializeField]
+    int loopTime;
+    [SerializeField]
+    int maxHammers;
 
     public TextMeshProUGUI tmpTimer;
 
@@ -28,9 +28,9 @@ public class HammerWaitLoop : SingletonManager<HammerWaitLoop> {
     /// </summary>
     /// <returns></returns>
     public IEnumerator RunWaitLoop() {
-        timeCounter.intTimer = loopTime;
-        timeCounter.isTimerEnabled = true;
-        yield return StartCoroutine(timeCounter.RunTimer(tmpTimer));
+        intTimer = loopTime;
+        isTimerEnabled = true;
+        yield return StartCoroutine(RunTimer(tmpTimer));
         RewardWithExtraHammer();
     }
 
@@ -43,7 +43,7 @@ public class HammerWaitLoop : SingletonManager<HammerWaitLoop> {
         if (CanLoop()) {
             StartCoroutine(RunWaitLoop());
         } else {
-            timeCounter.DisplayTimer(0, tmpTimer);
+            DisplayTimer(0, tmpTimer);
         }
     }
 
