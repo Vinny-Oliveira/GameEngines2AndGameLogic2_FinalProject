@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intHealth: 3
   intCoinValue: 3
-  intTimeBooster: 2
+  intTimeBooster: 1
   particleDestruction: {fileID: 8208620652909743792, guid: 57b8d5235fdc906468b0a5a75b630868,
     type: 3}
   particleDamage: {fileID: 9142820415948450338, guid: 6b5ef69a3cdecce40ba9f479de16c33c,
