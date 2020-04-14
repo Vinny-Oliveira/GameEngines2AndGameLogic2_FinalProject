@@ -13,6 +13,7 @@ public class HammerWaitLoop : TimeCounter {
     [SerializeField]
     int maxHammers;
 
+    const string msgCantLoop = "Only when you have less than ";
     public TextMeshProUGUI tmpTimer;
 
     /// <summary>
@@ -20,7 +21,11 @@ public class HammerWaitLoop : TimeCounter {
     /// </summary>
     /// <returns></returns>
     public bool CanLoop() {
-        return (HammerManager.instance.GetHammers().Count < maxHammers);
+        if (HammerManager.instance.GetHammers().Count < maxHammers) {
+            return true;
+        }
+        DisplayCantLoopMessage();
+        return false;
     }
 
     /// <summary>
@@ -42,9 +47,14 @@ public class HammerWaitLoop : TimeCounter {
         CoinManager.instance.SaveBankAndHammers();
         if (CanLoop()) {
             StartCoroutine(RunWaitLoop());
-        } else {
-            DisplayTimer(0, tmpTimer);
         }
+    }
+
+    /// <summary>
+    /// Display a message saying why the loop is not enabled
+    /// </summary>
+    void DisplayCantLoopMessage() {
+        tmpTimer.text = msgCantLoop + maxHammers;
     }
 
 }
