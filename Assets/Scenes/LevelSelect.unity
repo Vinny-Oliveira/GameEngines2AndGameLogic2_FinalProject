@@ -3908,6 +3908,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494966294}
   m_CullTransparentMesh: 0
+--- !u!114 &496315509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3238702524864889305, guid: 3154525c82d34b84aaf0fb365c478328,
+    type: 3}
+  m_PrefabInstance: {fileID: 1455295121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &504544850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9479,6 +9491,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6830378162366049776, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.000122
+      objectReference: {fileID: 0}
     - target: {fileID: 7718376661960605858, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -11073,7 +11090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loopTime: 5
   maxHammers: 30
-  tmpTimer: {fileID: 1716787617}
+  tmpTimer: {fileID: 496315509}
 --- !u!4 &1647526325
 Transform:
   m_ObjectHideFlags: 0
@@ -11385,18 +11402,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708028653}
   m_CullTransparentMesh: 0
---- !u!114 &1716787617 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 551382043230943798, guid: 3154525c82d34b84aaf0fb365c478328,
-    type: 3}
-  m_PrefabInstance: {fileID: 1455295121}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1726756970
 GameObject:
   m_ObjectHideFlags: 0
