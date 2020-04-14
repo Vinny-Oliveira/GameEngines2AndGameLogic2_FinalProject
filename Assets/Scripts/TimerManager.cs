@@ -93,7 +93,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     public void BoostTimer(int timeBoost) {
         if (timeBoost > 0) {
             timeCounter.intTimer += timeBoost;
-            timeCounter.DisplayTimer(intTimer, tmpTimer);
+            timeCounter.DisplayTimer(timeCounter.intTimer, tmpTimer);
             tmpTimeBooster.text = "+" + timeBoost;
             animatorTime.SetTrigger(animatorTime.parameters[0].name);
             if (audioSource == null) {
