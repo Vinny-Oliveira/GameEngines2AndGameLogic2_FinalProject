@@ -6,7 +6,7 @@ using TMPro;
 using System;
 
 /// <summary>
-/// In-Game products
+/// In-Game products: the time products are numbered according to their time value
 /// </summary>
 [System.Serializable]
 public enum Product { 
