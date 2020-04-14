@@ -75,13 +75,7 @@ public class TimerManager : SingletonManager<TimerManager> {
     void HandleTimerStop() { 
         if (timeCounter.intTimer < 1) {
             timeCounter.intTimer = 0;
-            if (WinLossManager.GetRetryState()) {
-                AnalyticsManager.Increase2ndGameOverAnalytics();
-            } else {
-                AnalyticsManager.Increase1stGameOverAnalytics();
-            }
-
-            WinLossManager.DisplayWinLossPanel(pnl_TimesUp, tmpReward);
+            WinLossManager.SendGameOverAnalytics(pnl_TimesUp, tmpReward);
         }
     }
 
@@ -99,7 +93,6 @@ public class TimerManager : SingletonManager<TimerManager> {
     public void BoostTimer(int timeBoost) {
         if (timeBoost > 0) {
             timeCounter.intTimer += timeBoost;
-            //DisplayTimer();
             timeCounter.DisplayTimer(intTimer, tmpTimer);
             tmpTimeBooster.text = "+" + timeBoost;
             animatorTime.SetTrigger(animatorTime.parameters[0].name);
