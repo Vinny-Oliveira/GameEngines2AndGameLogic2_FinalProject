@@ -8735,7 +8735,7 @@ PrefabInstance:
     - target: {fileID: 4184721658496083170, guid: 7316117b3b9a29540b4de6cc21311cd9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: -0.70711
       objectReference: {fileID: 0}
     - target: {fileID: 4184721658496083170, guid: 7316117b3b9a29540b4de6cc21311cd9,
         type: 3}
@@ -8745,7 +8745,7 @@ PrefabInstance:
     - target: {fileID: 4184721658496083170, guid: 7316117b3b9a29540b4de6cc21311cd9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029504295
+      value: -0.70710367
       objectReference: {fileID: 0}
     - target: {fileID: 4184721658496083170, guid: 7316117b3b9a29540b4de6cc21311cd9,
         type: 3}
@@ -8760,7 +8760,7 @@ PrefabInstance:
     - target: {fileID: 4184721658496083170, guid: 7316117b3b9a29540b4de6cc21311cd9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180.00002
+      value: -269.999
       objectReference: {fileID: 0}
     - target: {fileID: 4184721658496083170, guid: 7316117b3b9a29540b4de6cc21311cd9,
         type: 3}
@@ -10975,6 +10975,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2178137300975509862, guid: 05fecccdbd331924c94489d6899da4f3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178137300975509862, guid: 05fecccdbd331924c94489d6899da4f3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178137300975509862, guid: 05fecccdbd331924c94489d6899da4f3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9221556
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178137300975509862, guid: 05fecccdbd331924c94489d6899da4f3,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.99215686
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05fecccdbd331924c94489d6899da4f3, type: 3}
 --- !u!1001 &1789469722
@@ -12496,6 +12516,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000052748896
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213204960487590724, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213204960487590724, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.400024
       objectReference: {fileID: 0}
     - target: {fileID: 9213204960668522136, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
