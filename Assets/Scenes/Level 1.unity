@@ -6866,6 +6866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpCoins: {fileID: 502231102}
+  hammerWaitLoop: {fileID: 0}
 --- !u!4 &1992800456
 Transform:
   m_ObjectHideFlags: 0
@@ -7636,6 +7637,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2034325675214995966, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2495407162721459785, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7726,10 +7732,15 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8395301243749793737, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8684211688860233331, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.000122
+      value: -20.000183
       objectReference: {fileID: 0}
     - target: {fileID: 8698818248961882106, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
