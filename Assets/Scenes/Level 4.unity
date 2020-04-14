@@ -15502,6 +15502,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -878.92236
       objectReference: {fileID: 0}
+    - target: {fileID: 2221222086205518887, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: nextScene.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 4aadc73b4e9670446923c4409db4829f,
+        type: 3}
+    - target: {fileID: 2221222086205518887, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: nextScene.m_SceneName
+      value: LevelSelect
+      objectReference: {fileID: 0}
     - target: {fileID: 2246493538632725019, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -15846,6 +15857,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815456324108811803, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: nextScene.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 4aadc73b4e9670446923c4409db4829f,
+        type: 3}
+    - target: {fileID: 3815456324108811803, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: nextScene.m_SceneName
+      value: LevelSelect
       objectReference: {fileID: 0}
     - target: {fileID: 3926376546355005688, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
@@ -16486,6 +16508,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046167685613597974, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: nextScene.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 4aadc73b4e9670446923c4409db4829f,
+        type: 3}
+    - target: {fileID: 8046167685613597974, guid: 3154525c82d34b84aaf0fb365c478328,
+        type: 3}
+      propertyPath: nextScene.m_SceneName
+      value: LevelSelect
       objectReference: {fileID: 0}
     - target: {fileID: 8152367340070373682, guid: 3154525c82d34b84aaf0fb365c478328,
         type: 3}
